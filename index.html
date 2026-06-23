@@ -3,496 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niyas - Universal Tamil Companion Live App</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts & FontAwesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            deep: '#070a13',
-                            card: '#0f172a',
-                            border: '#1e293b',
-                            primary: '#4f46e5',
-                            secondary: '#06b6d4',
-                            success: '#10b981',
-                            warning: '#f59e0b',
-                            danger: '#ef4444'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Noto Sans Tamil', 'Poppins', 'sans-serif'],
-                        mono: ['Fira Code', 'monospace']
-                    }
-                }
-            }
-        }
-    </script>
-
+    <title>Niyas Tamil Companion App</title>
     <style>
         body {
-            background-color: #070a13;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(79, 70, 229, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
-            font-family: 'Noto Sans Tamil', 'Poppins', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
         }
-        .custom-scroll::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #333;
         }
-        .custom-scroll::-webkit-scrollbar-track {
-            background: rgba(15, 23, 42, 0.3);
+        header h1 {
+            color: #4da6ff;
+            margin: 0;
+            font-size: 24px;
         }
-        .custom-scroll::-webkit-scrollbar-thumb {
-            background: rgba(79, 70, 229, 0.3);
-            border-radius: 99px;
+        header p {
+            color: #aaa;
+            margin: 5px 0 0 0;
+            font-size: 14px;
         }
-        .custom-scroll::-webkit-scrollbar-thumb:hover {
-            background: rgba(79, 70, 229, 0.6);
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
         }
-        .phone-shadow {
-            box-shadow: 0 25px 50px -12px rgba(79, 70, 229, 0.25);
+        .card {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid #4da6ff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .card h2 {
+            color: #ff9933;
+            margin-top: 0;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card p {
+            line-height: 1.6;
+            color: #ccc;
+        }
+        .quiz-option {
+            background-color: #2a2a2a;
+            padding: 8px 12px;
+            margin: 5px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .quiz-option:hover {
+            background-color: #3a3a3a;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 12px;
+            margin-top: 40px;
+            border-top: 1px solid #222;
         }
     </style>
 </head>
-<body class="text-slate-100 min-h-screen flex flex-col">
+<body>
 
-    <!-- Header Section -->
-    <header class="bg-slate-950/80 border-b border-brand-border/60 py-4 px-6 sticky top-0 backdrop-blur-md z-50">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-secondary flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                    <i class="fa-solid fa-shapes text-white text-lg animate-pulse"></i>
-                </div>
-                <div>
-                    <h1 class="text-lg md:text-xl font-bold text-white tracking-wide">Niyas Tamil Companion App</h1>
-                    <p class="text-xs text-slate-400">Project Name: <span class="text-brand-secondary font-mono">Friends_copy_copy</span> | Created by Niyas</p>
-                </div>
-            </div>
-            <div class="flex items-center gap-3">
-                <span class="text-xs bg-emerald-500/10 border border-emerald-500/30 px-3 py-1.5 rounded-full text-emerald-400 flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-                    Live Web App & GitHub Ready
-                </span>
-            </div>
-        </div>
+    <header>
+        <h1>Niyas Tamil Companion App</h1>
+        <p>மாணவர்கள் மற்றும் பொதுமக்களுக்கான தமிழ் நல்வழிகாட்டி 🚀</p>
     </header>
 
-    <!-- Main Workspace -->
-    <main class="max-w-7xl mx-auto p-4 md:p-8 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-8">
-        
-        <!-- LEFT COLUMN (5 Columns) - Responsive Interactive Phone Mockup -->
-        <section class="lg:col-span-5 flex flex-col items-center">
-            <div class="w-full max-w-[370px]">
-                
-                <!-- Phone Wrapper Frame -->
-                <div class="relative mx-auto border-[10px] border-slate-800 bg-slate-900 rounded-[45px] phone-shadow overflow-hidden aspect-[9/19] flex flex-col">
-                    
-                    <!-- Top Phone Speaker & Camera Notch -->
-                    <div class="absolute top-0 inset-x-0 h-6 bg-slate-800 flex justify-center items-center z-50">
-                        <div class="w-24 h-4 bg-slate-950 rounded-b-xl flex justify-center items-center">
-                            <div class="w-10 h-1 bg-slate-700 rounded-full"></div>
-                        </div>
-                    </div>
+    <div class="container">
 
-                    <!-- Phone Battery/Wifi Status Bar -->
-                    <div class="bg-slate-950 text-slate-400 text-[10px] px-6 pt-7 pb-1 flex justify-between items-center select-none z-30">
-                        <span id="phone-clock">12:30 PM</span>
-                        <div class="flex items-center gap-1.5">
-                            <i class="fa-solid fa-wifi"></i>
-                            <i class="fa-solid fa-signal"></i>
-                            <i class="fa-solid fa-battery-full text-emerald-500"></i>
-                        </div>
-                    </div>
-
-                    <!-- App Header inside Phone -->
-                    <div class="bg-slate-950 text-white py-3 px-4 flex justify-between items-center border-b border-brand-border/40 z-30">
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-star text-amber-400 animate-spin" style="animation-duration: 4s;"></i>
-                            <span class="font-bold text-sm text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300">தமிழ் நல்வழிகாட்டி</span>
-                        </div>
-                        <div class="flex items-center gap-1 bg-brand-primary/20 border border-brand-primary/40 px-2 py-0.5 rounded-full">
-                            <i class="fa-solid fa-users text-indigo-300 text-[8px]"></i>
-                            <span class="text-[9px] text-indigo-200" id="phone-active-label">அனைத்தும்</span>
-                        </div>
-                    </div>
-
-                    <!-- Search & Filter bar combined inside Phone -->
-                    <div class="bg-slate-950/90 border-b border-brand-border/40 p-2 flex flex-col gap-2 z-30">
-                        
-                        <!-- Search input box -->
-                        <div class="relative">
-                            <input type="text" id="phone-search-input" onkeyup="filterItemsBySearch()"
-                                   class="w-full bg-slate-900 border border-brand-border/60 rounded-lg pl-8 pr-3 py-1 text-[11px] text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-primary" 
-                                   placeholder="தேடுக (Search)...">
-                            <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-2 text-[10px] text-slate-500"></i>
-                        </div>
-
-                        <!-- Mini pills horizontal category filter bar -->
-                        <div class="flex gap-1.5 overflow-x-auto custom-scroll pb-1">
-                            <button onclick="changePhoneFilter('all')" id="btn-p-all" class="flex-shrink-0 text-[10px] bg-brand-primary text-white px-2.5 py-1 rounded-full font-medium transition-all">அனைத்தும்</button>
-                            <button onclick="changePhoneFilter('students')" id="btn-p-students" class="flex-shrink-0 text-[10px] bg-slate-900 text-slate-400 border border-brand-border hover:bg-slate-800 px-2.5 py-1 rounded-full font-medium transition-all"><i class="fa-solid fa-user-graduate text-blue-500 mr-1"></i>மாணவர்</button>
-                            <button onclick="changePhoneFilter('kids')" id="btn-p-kids" class="flex-shrink-0 text-[10px] bg-slate-900 text-slate-400 border border-brand-border hover:bg-slate-800 px-2.5 py-1 rounded-full font-medium transition-all"><i class="fa-solid fa-child text-amber-500 mr-1"></i>சிறுவர்</button>
-                            <button onclick="changePhoneFilter('adults')" id="btn-p-adults" class="flex-shrink-0 text-[10px] bg-slate-900 text-slate-400 border border-brand-border hover:bg-slate-800 px-2.5 py-1 rounded-full font-medium transition-all"><i class="fa-solid fa-lightbulb text-emerald-500 mr-1"></i>அறிஞர்</button>
-                            <button onclick="changePhoneFilter('friends')" id="btn-p-friends" class="flex-shrink-0 text-[10px] bg-slate-900 text-slate-400 border border-brand-border hover:bg-slate-800 px-2.5 py-1 rounded-full font-medium transition-all"><i class="fa-solid fa-handshake text-purple-500 mr-1"></i>நண்பர்</button>
-                        </div>
-
-                    </div>
-
-                    <!-- Phone Screen Feed Area -->
-                    <div class="flex-grow bg-slate-950 p-3 overflow-y-auto custom-scroll flex flex-col gap-3" id="phone-listview">
-                        <!-- Items rendered here by Javascript dynamically -->
-                    </div>
-
-                    <!-- Bottom Add Layout inside Phone -->
-                    <div class="bg-slate-900 p-3 border-t border-brand-border/60 flex flex-col gap-2 z-30">
-                        <div class="flex justify-between items-center">
-                            <label class="text-[10px] text-slate-400 font-medium"><i class="fa-solid fa-tags text-brand-secondary mr-1"></i>பிரிவை தேர்வு செய்:</label>
-                            <select id="phone-add-category" class="bg-slate-950 border border-brand-border rounded px-2 py-0.5 text-[10px] text-slate-300 focus:outline-none focus:border-brand-primary">
-                                <option value="students">📚 மாணவர்கள்</option>
-                                <option value="kids">🧸 சிறுவர்கள்</option>
-                                <option value="adults">💡 அறிஞர்கள்</option>
-                                <option value="friends">🤝 நண்பர்கள்</option>
-                            </select>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <input type="text" id="phone-add-input" 
-                                   class="flex-grow bg-slate-950 border border-brand-border rounded-xl px-3 py-2 text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:border-brand-primary" 
-                                   placeholder="இங்கு புதிய தகவலை தட்டச்சு செய்யவும்...">
-                            <button onclick="addPhoneItem()" 
-                                    class="bg-brand-primary hover:bg-indigo-500 active:scale-95 text-white w-9 h-9 rounded-xl flex items-center justify-center transition-all shadow-lg shadow-indigo-500/10">
-                                <i class="fa-solid fa-paper-plane text-xs"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Database Reset Options -->
-                <div class="flex justify-between items-center mt-4 px-2">
-                    <p class="text-xs text-slate-500"><i class="fa-solid fa-hdd mr-1"></i> TinyDB Synchronized</p>
-                    <button onclick="resetPhoneDatabase()" class="text-xs text-rose-500 hover:text-rose-400 font-medium transition-colors">
-                        <i class="fa-solid fa-rotate-left mr-1"></i>முழுமையாக அழிக்க
-                    </button>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- RIGHT COLUMN (7 Columns) - GitHub Deploy Instructions & Presets Creator -->
-        <section class="lg:col-span-7 flex flex-col gap-6">
-
-            <!-- Presets Generator Panel -->
-            <div class="bg-slate-900/60 border border-brand-border rounded-2xl p-6 shadow-xl backdrop-blur-sm">
-                <h2 class="text-base font-bold text-white flex items-center gap-2 mb-2">
-                    <i class="fa-solid fa-magic-wand-sparkles text-brand-warning"></i>
-                    உடனடி மாதிரி தகவல்கள் (Instant Template Presets)
-                </h2>
-                <p class="text-slate-400 text-xs leading-relaxed mb-4">
-                    நியாஸ்! உங்கள் அப்ளிகேஷனில் உள்ளே காண்பிக்க பல்வேறு புதிய தகவல்களைத் தயார் செய்து வைத்துள்ளேன். 
-                    உங்களுக்குத் தேவையான பிரிவைக் கிளிக் செய்து போனுக்குள் உடனே சேர்த்துக் கொள்ளலாம்!
-                </p>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <!-- Students Card -->
-                    <div class="bg-slate-950/80 border border-blue-900/40 p-3.5 rounded-xl hover:bg-slate-950 transition-all">
-                        <div class="flex justify-between items-center mb-1">
-                            <span class="text-xs text-blue-400 font-bold"><i class="fa-solid fa-graduation-cap"></i> மாணவர் பகுதி</span>
-                            <button onclick="injectDirectTemplate('students', 'படிக்கும் போது மொபைலை தூர வைத்தால் கவனம் 80% அதிகரிக்கும்! 📱')" class="text-[10px] bg-blue-900/30 text-blue-200 border border-blue-800/40 px-2 py-0.5 rounded-full hover:bg-blue-800/50">+ சேர்</button>
-                        </div>
-                        <p class="text-[11px] text-slate-400">"படிக்கும் போது மொபைலை தூர வைத்தால் கவனம் 80% அதிகரிக்கும்!"</p>
-                    </div>
-
-                    <!-- Kids Card -->
-                    <div class="bg-slate-950/80 border border-amber-900/40 p-3.5 rounded-xl hover:bg-slate-950 transition-all">
-                        <div class="flex justify-between items-center mb-1">
-                            <span class="text-xs text-amber-400 font-bold"><i class="fa-solid fa-baby"></i> சிறுவர் விடுகதை</span>
-                            <button onclick="injectDirectTemplate('kids', 'விடுகதை: இரவில் வந்து பகலில் மறையும் வெள்ளி பூக்கள் எது? விடை: விண்மீன்கள் 🌟')" class="text-[10px] bg-amber-900/30 text-amber-200 border border-amber-800/40 px-2 py-0.5 rounded-full hover:bg-amber-800/50">+ சேர்</button>
-                        </div>
-                        <p class="text-[11px] text-slate-400">"இரவில் வந்து பகலில் மறையும் வெள்ளி பூக்கள் எது? விடை: விண்மீன்கள்!"</p>
-                    </div>
-
-                    <!-- Adults Card -->
-                    <div class="bg-slate-950/80 border border-emerald-900/40 p-3.5 rounded-xl hover:bg-slate-950 transition-all">
-                        <div class="flex justify-between items-center mb-1">
-                            <span class="text-xs text-emerald-400 font-bold"><i class="fa-solid fa-quote-left"></i> அறிஞர்களின் பொன்மொழி</span>
-                            <button onclick="injectDirectTemplate('adults', 'இன்றைய சிறு சேமிப்பு தான் உங்களின் நாளைய பிரகாசமான எதிர்காலம்! 💰')" class="text-[10px] bg-emerald-900/30 text-emerald-200 border border-emerald-800/40 px-2 py-0.5 rounded-full hover:bg-emerald-800/50">+ சேர்</button>
-                        </div>
-                        <p class="text-[11px] text-slate-400">"இன்றைய சிறு சேமிப்பு தான் உங்களின் நாளைய எதிர்காலம்!"</p>
-                    </div>
-
-                    <!-- Friends Card -->
-                    <div class="bg-slate-950/80 border border-purple-900/40 p-3.5 rounded-xl hover:bg-slate-950 transition-all">
-                        <div class="flex justify-between items-center mb-1">
-                            <span class="text-xs text-purple-400 font-bold"><i class="fa-solid fa-heart"></i> நட்பு கவிதைகள்</span>
-                            <button onclick="injectDirectTemplate('friends', 'ஆயிரம் உறவுகள் வந்து சென்றாலும், அன்றும் இன்றும் என்றும் நம் நட்பு மாறாது! 🤝')" class="text-[10px] bg-purple-900/30 text-purple-200 border border-purple-800/40 px-2 py-0.5 rounded-full hover:bg-purple-800/50">+ சேர்</button>
-                        </div>
-                        <p class="text-[11px] text-slate-400">"ஆயிரம் உறவுகள் வந்தாலும் நம் நட்பு என்றும் மாறாது!"</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- GitHub Hosting Guide -->
-            <div class="bg-slate-900 border border-brand-border rounded-2xl overflow-hidden shadow-xl">
-                <div class="bg-gradient-to-r from-slate-950 to-slate-900 px-6 py-4 border-b border-brand-border flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center">
-                        <i class="fa-brands fa-github text-white text-base"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-sm font-bold text-white">GitHub Pages மூலமாக லைவ் வெப்சைட்டாக மாற்றுவது எப்படி?</h3>
-                        <p class="text-[11px] text-slate-400">மிக எளிதாக 1 நிமிடத்தில் ஆப்பை இணையத்தில் பதிவேற்றலாம்</p>
-                    </div>
-                </div>
-
-                <div class="p-6 flex flex-col gap-4 text-xs text-slate-300 leading-relaxed">
-                    <div class="flex gap-3">
-                        <span class="w-5 h-5 rounded-full bg-brand-primary text-white font-bold flex items-center justify-center flex-shrink-0 text-[10px]">1</span>
-                        <p>முதலில் உங்கள் <a href="https://github.com" target="_blank" class="text-brand-secondary underline font-medium">GitHub</a> கணக்கிற்குள் லாக்-இன் செய்து, ஒரு புதிய <strong>Repository</strong>-ஐ உருவாக்கவும். அதற்கு <code>niyas-tamil-companion-app</code> என்று பெயரிடவும்.</p>
-                    </div>
-                    <div class="flex gap-3">
-                        <span class="w-5 h-5 rounded-full bg-brand-primary text-white font-bold flex items-center justify-center flex-shrink-0 text-[10px]">2</span>
-                        <p>அங்கே ஒரு புதிய கோப்பை உருவாக்கி அதற்கு <code>index.html</code> என்று பெயரிட்டு, இந்த எடிட்டரில் இருக்கும் முழு குறியீட்டையும் (Code) அப்படியே காப்பி செய்து பேஸ்ட் செய்து <strong>Commit</strong> செய்யவும்.</p>
-                    </div>
-                    <div class="flex gap-3">
-                        <span class="w-5 h-5 rounded-full bg-brand-primary text-white font-bold flex items-center justify-center flex-shrink-0 text-[10px]">3</span>
-                        <p>இப்போது உங்கள் ரெபாசிட்டரியின் <strong>Settings</strong> -> <strong>Pages</strong> என்ற பகுதிக்குச் செல்லவும். அங்கே Source என்பதில் <strong>Deploy from a branch</strong> என்பதைத் தேர்வு செய்து, Branch பிரிவில் <strong>main</strong> அல்லது <strong>master</strong> என்பதை தேர்வு செய்து சேமிக்கவும்.</p>
-                    </div>
-                    <div class="flex gap-3 text-emerald-400">
-                        <i class="fa-solid fa-circle-check text-base flex-shrink-0 mt-0.5"></i>
-                        <p class="font-medium">வெற்றிகரமாக முடிந்தது! இப்போது 1 நிமிடத்திற்குள் உங்களுக்கு ஒரு பிரத்யேக இணையதள முகவரி (லிங்க்) கிடைத்துவிடும். அதை உங்கள் நண்பர்களுடனும், சமூக வலைத்தளங்களிலும் பகிர்ந்து கொள்ளலாம்!</p>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-    </main>
-
-    <!-- Animated Status Toast Alert -->
-    <div id="phone-toast" class="fixed bottom-6 right-6 bg-slate-900 border border-brand-primary/30 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-300 z-50">
-        <div class="w-6 h-6 rounded-full bg-brand-primary flex items-center justify-center text-xs" id="toast-icon-area">
-            <i class="fa-solid fa-check text-white"></i>
+        <!-- பிரிவு 1: மாணவர் பகுதி -->
+        <div class="card">
+            <h2>📚 மாணவர் பகுதி (Student Zone)</h2>
+            <p><strong>போட்டித் தேர்வு எழுதுபவர்களின் கவனத்திற்கு:</strong> TNPSC, UPSC மற்றும் SSC போன்ற தேர்வுகளுக்குத் தயாராகும் மாணவர்கள் தங்களின் லட்சியத்தை அடைய தினமும் திட்டமிட்டுப் படிப்பது அவசியம். விடாமுயற்சியே வெற்றிக்கான முதல் படி!</p>
         </div>
-        <span class="text-xs font-medium text-slate-200" id="toast-text-area">செயல்பாடு முடிந்தது!</span>
+
+        <!-- பிரிவு 2: பொன்மொழிகள் -->
+        <div class="card">
+            <h2>💡 அறிஞர்களின் பொன்மொழி</h2>
+            <p><em>"உன்னால் முடியும் என்று நம்பு, உனக்குள்ளே எல்லையற்ற ஆற்றல் மறைந்துள்ளது."</em><br> — <strong>சுவாமி விவேகானந்தர்</strong></p>
+        </div>
+
+        <!-- பிரிவு 3: பொது அறிவு வினா-விடை -->
+        <div class="card">
+            <h2>🎯 இன்றைய பொது அறிவு வினா (Daily Quiz)</h2>
+            <p><strong>கேள்வி:</strong> இந்தியாவின் மிக உயர்ந்த விருது எது?</p>
+            <div class="quiz-option">அ) பத்ம விபூஷண்</div>
+            <div class="quiz-option">ஆ) பாரத ரத்னா (சரியான விடை)</div>
+            <div class="quiz-option">இ) பரம வீர சக்கரம்</div>
+        </div>
+
+        <!-- பிரிவு 4: உள்ளூர் வழிகாட்டி -->
+        <div class="card">
+            <h2>📍 பொதுச் சேவை மைய வழிகாட்டி (CSC Guide)</h2>
+            <p>அரசின் சான்றிதழ்கள் (வருமான சான்றிதழ், சாதி சான்றிதழ், இருப்பிட சான்றிதழ்) மற்றும் இதர நலத்திட்டங்களுக்கு விண்ணப்பிக்கத் தேவையான ஆவணங்களை எப்போதும் கைவசம் வைத்திருங்கள். இது உங்கள் நேரத்தை மிச்சப்படுத்தும்.</p>
+        </div>
+
     </div>
 
-    <!-- Page Footer -->
-    <footer class="mt-auto border-t border-brand-border/40 py-5 text-center text-xs text-slate-600 bg-slate-950/40">
-        <p>© 2026 Niyas Tamil Companion App | Designed & Maintained by Mohamed Niyas.</p>
+    <footer>
+        <p>© 2026 Niyas Digital Center. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
     </footer>
 
-    <!-- JavaScript Simulator Engines -->
-    <script>
-        // Preset items to load initially
-        const preInstalledDatabase = [
-            { id: 101, category: "students", text: "📚 தினமும் படித்து முடித்தவுடன் 10 நிமிடம் ஓய்வெடுத்தால் படித்தது மனதில் எளிதாகப் பதியும்! 🧠" },
-            { id: 102, category: "kids", text: "🧸 விடுகதை: ஒரு வீட்டுக்கு ஒரு வாசல், காற்று வரும், வெளிச்சம் வராது. அது என்ன? விடை: மூக்கு 👃" },
-            { id: 103, category: "adults", text: "💡 கோபத்தில் ஒருபோதும் முடிவெடுக்காதே; மகிழ்ச்சியில் ஒருபோதும் வாக்குறுதி அளிக்காதே! - பொன்மொழி" },
-            { id: 104, category: "friends", text: "🤝 உண்மையான நட்பு இதயத்தின் ஆழத்தில் இருந்து பிறப்பது, அது என்றும் அழியாது! 💖" },
-            { id: 105, category: "students", text: "📚 கணிதத்தில் கூடுதல் மதிப்பெண்கள் பெற தினமும் 5 புதிய கணக்குகளை பயிற்சி செய்யவும்." },
-            { id: 106, category: "kids", text: "🧸 நீதிக்கதை: முயல் மற்றும் ஆமையின் கதை நமக்குக் கற்றுத் தருவது - நிதானமும் விடாமுயற்சியுமே எப்போதும் வெல்லும்! 🐢🐇" }
-        ];
-
-        let simulatedTinyDB = [];
-        let activeCategoryFilter = "all";
-
-        window.onload = function() {
-            // Clock handler for Android simulator UI
-            updatePhoneClock();
-            setInterval(updatePhoneClock, 60000);
-
-            // Load data from LocalStorage
-            const storedData = localStorage.getItem('niyas_all_in_one_db');
-            if (storedData) {
-                simulatedTinyDB = JSON.parse(storedData);
-            } else {
-                simulatedTinyDB = [...preInstalledDatabase];
-                persistLocalDatabase();
-            }
-
-            renderPhoneList();
-        }
-
-        // Clock driver
-        function updatePhoneClock() {
-            const date = new Date();
-            let hh = date.getHours();
-            let mm = date.getMinutes();
-            const suffix = hh >= 12 ? 'PM' : 'AM';
-            hh = hh % 12;
-            hh = hh ? hh : 12;
-            mm = mm < 10 ? '0' + mm : mm;
-            document.getElementById('phone-clock').innerText = `${hh}:${mm} ${suffix}`;
-        }
-
-        // Local Storage persistence layer
-        function persistLocalDatabase() {
-            localStorage.setItem('niyas_all_in_one_db', JSON.stringify(simulatedTinyDB));
-        }
-
-        // Change categories from filters
-        function changePhoneFilter(category) {
-            activeCategoryFilter = category;
-
-            const categoryList = ['all', 'students', 'kids', 'adults', 'friends'];
-            categoryList.forEach(item => {
-                const button = document.getElementById(`btn-p-${item}`);
-                if (item === category) {
-                    button.className = "flex-shrink-0 text-[10px] bg-brand-primary text-white px-2.5 py-1 rounded-full font-medium transition-all shadow-md";
-                } else {
-                    button.className = "flex-shrink-0 text-[10px] bg-slate-900 text-slate-400 border border-brand-border hover:bg-slate-800 px-2.5 py-1 rounded-full font-medium transition-all";
-                }
-            });
-
-            // Set labels inside smartphone header
-            const headerLabel = document.getElementById('phone-active-label');
-            const translationMap = {
-                all: 'அனைத்தும்',
-                students: 'மாணவர்கள்',
-                kids: 'சிறுவர்கள்',
-                adults: 'அறிஞர்கள்',
-                friends: 'நண்பர்கள்'
-            };
-            headerLabel.innerText = translationMap[category] || 'அனைத்தும்';
-
-            renderPhoneList();
-        }
-
-        // Search engine filter inside list
-        function filterItemsBySearch() {
-            renderPhoneList();
-        }
-
-        // Render feed lists
-        function renderPhoneList() {
-            const container = document.getElementById('phone-listview');
-            container.innerHTML = '';
-
-            const searchVal = document.getElementById('phone-search-input').value.toLowerCase().trim();
-
-            // Filter chain
-            let activeItems = simulatedTinyDB.filter(item => {
-                if (activeCategoryFilter === "all") return true;
-                return item.category === activeCategoryFilter;
-            });
-
-            if (searchVal !== "") {
-                activeItems = activeItems.filter(item => {
-                    return item.text.toLowerCase().includes(searchVal);
-                });
-            }
-
-            if (activeItems.length === 0) {
-                container.innerHTML = `
-                    <div class="flex flex-col items-center justify-center py-16 text-slate-600 text-center gap-2">
-                        <i class="fa-solid fa-magnifying-glass text-2xl text-slate-700 animate-pulse"></i>
-                        <span class="text-[10px] leading-normal text-slate-500">தகவல்கள் எதுவும் கிடைக்கவில்லை!<br>புதிய சொற்றொடர்களை டைப் செய்து ஆட் செய்யவும்.</span>
-                    </div>
-                `;
-                return;
-            }
-
-            activeItems.forEach(item => {
-                let badgeLabel = "";
-                let badgeClass = "bg-slate-850 text-slate-400 border border-slate-700/50";
-                let hoverBorder = "hover:border-slate-800";
-
-                if (item.category === "students") {
-                    badgeLabel = "மாணவர்கள்";
-                    badgeClass = "bg-blue-500/10 text-blue-400 border border-blue-500/20";
-                    hoverBorder = "hover:border-blue-500/40";
-                } else if (item.category === "kids") {
-                    badgeLabel = "சிறுவர்கள்";
-                    badgeClass = "bg-amber-500/10 text-amber-400 border border-amber-500/20";
-                    hoverBorder = "hover:border-amber-500/40";
-                } else if (item.category === "adults") {
-                    badgeLabel = "அறிஞர்கள்";
-                    badgeClass = "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20";
-                    hoverBorder = "hover:border-emerald-500/40";
-                } else if (item.category === "friends") {
-                    badgeLabel = "நண்பர்கள்";
-                    badgeClass = "bg-purple-500/10 text-purple-400 border border-purple-500/20";
-                    hoverBorder = "hover:border-purple-500/40";
-                }
-
-                // Is liked check
-                const likedState = item.liked ? "fa-solid fa-heart text-rose-500 animate-pulse" : "fa-regular fa-heart text-slate-500";
-
-                const elementHTML = `
-                    <div class="bg-slate-900 border border-brand-border/80 rounded-xl p-3 flex flex-col gap-2 relative transition-all duration-200 ${hoverBorder}">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[9px] px-2 py-0.5 rounded-md font-semibold ${badgeClass}">${badgeLabel}</span>
-                        </div>
-                        <p class="text-[11px] text-slate-200 leading-relaxed font-medium">${item.text}</p>
-                        <div class="flex justify-between items-center mt-1 pt-2 border-t border-brand-border/40 text-[10px] text-slate-500">
-                            <div class="flex items-center gap-3">
-                                <button onclick="likePhoneItem(${item.id})" class="hover:text-rose-500 transition-colors flex items-center gap-1 focus:outline-none">
-                                    <i class="${likedState}"></i> <span class="text-[9px]">விருப்பம்</span>
-                                </button>
-                                <button onclick="shareToWhatsApp('${item.text.replace(/'/g, "\\'")}')" class="text-emerald-500 hover:text-emerald-400 transition-colors flex items-center gap-1 focus:outline-none">
-                                    <i class="fa-brands fa-whatsapp text-emerald-500"></i> <span class="text-[9px]">பகிர்</span>
-                                </button>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <button onclick="copyToClipboard('${item.text.replace(/'/g, "\\'")}')" class="hover:text-brand-secondary transition-colors p-1" title="Copy">
-                                    <i class="fa-regular fa-copy"></i>
-                                </button>
-                                <button onclick="deletePhoneItem(${item.id})" class="text-rose-500 hover:text-rose-400 p-1" title="Delete">
-                                    <i class="fa-regular fa-trash-can"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                container.insertAdjacentHTML('beforeend', elementHTML);
-            });
-
-            container.scrollTop = container.scrollHeight;
-        }
-
-        // Add new items manually via phone form
-        function addPhoneItem() {
-            const inputField = document.getElementById('phone-add-input');
-            const selectField = document.getElementById('phone-add-category');
-            const typedText = inputField.value.trim();
-            const activeCat = selectField.value;
-
-            if (typedText === "") {
-                triggerToastAlert("வாக்கியம் ஏதேனும் தட்டச்சு செய்க!", "error");
-                return;
-            }
-
-            // Categorization Emoji prefix auto generator
-            let emojiPrefix = "";
-            if (activeCat === "students") emojiPrefix = "📚 ";
-            else if (activeCat === "kids") emojiPrefix = "🧸 ";
-            else if (activeCat === "adults") emojiPrefix = "💡 ";
-            else if (activeCat === "friends") emojiPrefix = "🤝 ";
-
-            const newObj = {
-                id: Date.now(),
-                category: activeCat,
-                text: `${emojiPrefix}${typedText}`,
-                liked: false
-            };
-
-            simulatedTinyDB.push(newObj);
-            persistLocalDatabase();
-            renderPhoneList();
-            
-            inputField.value = "";
-            triggerToastAlert("புதிய தகவல் வெற்றிகரமாகச் சேமிக்கப்பட்டது!", "success");
-        }
-
-        // Inject direct preset template
-        function injectDirectTemplate(category, textContent) {
-            let
+</body>
+</html>
