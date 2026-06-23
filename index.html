@@ -87,13 +87,6 @@
         .tab-content.active {
             display: block;
         }
-        .tab-content h3 {
-            color: #4da6ff;
-            margin-top: 15px;
-            font-size: 16px;
-            border-bottom: 1px solid #444;
-            padding-bottom: 5px;
-        }
         
         /* Button Link Styling */
         .download-btn {
@@ -132,7 +125,24 @@
             display: none;
         }
 
-        /* Flash News / Updates Badge */
+        /* Riddle Styling */
+        .riddle-btn {
+            background-color: #ff9933;
+            color: #121212;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .riddle-ans {
+            display: none;
+            color: #4dff4d;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
         .badge {
             background-color: #dc3545;
             color: white;
@@ -140,18 +150,9 @@
             border-radius: 3px;
             font-size: 12px;
             font-weight: bold;
-            text-transform: uppercase;
         }
-
-        ul {
-            padding-left: 20px;
-            margin: 10px 0;
-        }
-        li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-            color: #ddd;
-        }
+        ul { padding-left: 20px; margin: 10px 0; }
+        li { margin-bottom: 8px; line-height: 1.6; color: #ddd; }
         footer {
             text-align: center;
             padding: 25px;
@@ -167,94 +168,94 @@
 
     <header>
         <h1>Niyas Tamil Companion App</h1>
-        <p>மாணவர்கள் மற்றும் பொதுமக்களுக்கான கல்வி, வேலைவாய்ப்பு மற்றும் நல்வழிகாட்டி 🚀</p>
+        <p>அனைவருக்குமான கல்வி, பொழுதுபோக்கு மற்றும் நல்வழிகாட்டி 🚀</p>
     </header>
 
     <div class="container">
 
-        <!-- புதிய பிரிவு: உள்ளூர் அறிவிப்புப் பலகை & நடப்பு நிகழ்வுகள் -->
+        <!-- நேரடி அறிவிப்பு பலகை -->
         <div class="card" style="border-left-color: #dc3545;">
             <h2>📢 உள்ளூர் அறிவிப்புப் பலகை & நடப்பு செய்திகள் (Live Info)</h2>
             <ul>
-                <li><span class="badge">புதியது</span> <strong>தென்காசி மாவட்டக் கல்விச் செய்திகள்:</strong> பள்ளி மாணவர்களுக்கான NMMS (தேசிய திறனாய்வுத் தேர்வு) முடிவுகள் மற்றும் மாவட்ட வாரியான தரவரிசைப் பட்டியல்களைத் தகுந்த அரசு இணையதளத்தில் உடனுக்குடன் சரிபார்த்துக் கொள்ளலாம்.</li>
-                <li><span class="badge">நடப்பு நிகழ்வு</span> இந்திய விண்வெளி ஆராய்ச்சி நிறுவனம் (ISRO) தனது புதிய செயற்கைக்கோள் ஏவுதல் திட்டத்தை வெற்றிகரமாகச் செயல்படுத்தியுள்ளது. போட்டித் தேர்வுக்குப் படிப்பவர்கள் இதைக் குறித்துக் கொள்ளவும்.</li>
+                <li><strong>தென்காசி மாவட்டக் கல்விச் செய்திகள்:</strong> பள்ளி மாணவர்களுக்கான NMMS (தேசிய திறனாய்வுத் தேர்வு) முடிவுகள் மற்றும் மாவட்ட வாரியான தரவரிசைப் பட்டியல்களைத் தகுந்த அரசு இணையதளத்தில் சரிபார்த்துக் கொள்ளலாம்.</li>
             </ul>
         </div>
 
-        <!-- பிரிவு 1: போட்டித் தேர்வுகள் வழிகாட்டி (Syllabus & Books) -->
-        <div class="card">
+        <!-- பிரிவு 1: போட்டித் தேர்வுகள் வழிகாட்டி -->
+        <div class="card" style="border-left-color: #4da6ff;">
             <h2>📚 போட்டித் தேர்வுகள் மற்றும் பாடப்புத்தகங்கள் (Exam Hub)</h2>
-            <p>தேர்வுகளுக்கான முக்கியப் பாடத்திட்டங்கள் மற்றும் பள்ளிப் பாடப்புத்தகங்களை (School Textbooks PDF) இங்கிருந்தே நேரடியாகப் பதிவிறக்கம் செய்து கொள்ளலாம்:</p>
-            
-            <!-- Tabs பொத்தான்கள் -->
             <div class="tabs">
-                <button class="tab-btn active" onclick="openTab(event, 'tnpsc')">TNPSC (தமிழக அரசு)</button>
-                <button class="tab-btn" onclick="openTab(event, 'upsc')">UPSC (IAS/IPS)</button>
-                <button class="tab-btn" onclick="openTab(event, 'ssc')">SSC (மத்திய அரசு)</button>
+                <button class="tab-btn active" onclick="openTab(evt, 'tnpsc')">TNPSC (தமிழக அரசு)</button>
+                <button class="tab-btn" onclick="openTab(evt, 'upsc')">UPSC (IAS/IPS)</button>
+                <button class="tab-btn" onclick="openTab(evt, 'ssc')">SSC (மத்திய அரசு)</button>
             </div>
 
-            <!-- TNPSC Content -->
             <div id="tnpsc" class="tab-content active">
-                <h3>📌 TNPSC குரூப் 1, 2 & 4 பாடத்திட்டம் (Syllabus)</h3>
+                <h3>📌 TNPSC பாடத்திட்டம் (Syllabus)</h3>
                 <ul>
-                    <li>பொதுத் தமிழ் / பொது ஆங்கிலம் (குரூப் 4 தேர்விற்கு மிக முக்கியம்)</li>
-                    <li>பொது அறிவு (இந்திய வரலாறு, அரசமைப்பு, புவியியல், பொருளாதாரம்)</li>
-                    <li>திறனறிவும் மனக்கணக்கு நுண்ணறிவும் (Aptitude & Mental Ability)</li>
+                    <li>பொதுத் தமிழ் / பொது ஆங்கிலம், பொது அறிவு, மற்றும் திறனறிவும் மனக்கணக்கு நுண்ணறிவும்.</li>
                 </ul>
-                
-                <h3>📥 சமச்சீர் கல்விப் புத்தகங்கள் (PDF பதிவிறக்கம்)</h3>
-                <p>மாணவர்கள் எளிதாகப் படிக்க அதிகாரப்பூர்வப் புத்தகங்களின் டவுன்லோட் லிங்க்குகள்:</p>
-                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="download-btn">6-ஆம் வகுப்பு புத்தகங்கள்</a>
-                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="download-btn">8-ஆம் வகுப்பு புத்தகங்கள்</a>
-                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="download-btn">10-ஆம் வகுப்பு புத்தகங்கள்</a>
-                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="download-btn">12-ஆம் வகுப்பு புத்தகங்கள்</a>
+                <h3>📥 சமச்சீர் கல்விப் புத்தகங்கள்</h3>
+                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="download-btn">6-ஆம் வகுப்பு</a>
+                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="download-btn">8-ஆம் வகுப்பு</a>
+                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="download-btn">10-ஆம் வகுப்பு</a>
+                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="download-btn">12-ஆம் வகுப்பு</a>
             </div>
-
-            <!-- UPSC Content -->
+            <!-- (UPSC & SSC tabs handle standard click toggle via JS below) -->
             <div id="upsc" class="tab-content">
-                <h3>📌 UPSC சிவில் சர்வீசஸ் பாடத்திட்டம் (Syllabus)</h3>
-                <ul>
-                    <li><strong>Preliminary Exam:</strong> General Studies (GS) & CSAT (தகுதித் தேர்வு)</li>
-                    <li><strong>Main Exam:</strong> கட்டுரை மற்றும் 4 பொது அறிவு தாள்கள் (GS I, II, III, IV)</li>
-                </ul>
-                <h3>📥 NCERT அடிப்படைப் புத்தகங்கள்</h3>
-                <a href="https://ncert.nic.in/textbook.php" target="_blank" class="download-btn">NCERT Books PDF பதிவிறக்கு</a>
+                <h3>📌 UPSC சிவில் சர்வீசஸ்</h3>
+                <a href="https://ncert.nic.in/textbook.php" target="_blank" class="download-btn">NCERT Books PDF</a>
             </div>
-
-            <!-- SSC Content -->
             <div id="ssc" class="tab-content">
-                <h3>📌 SSC CHSL / CGL பாடத்திட்டம் (Syllabus)</h3>
-                <ul>
-                    <li>General Intelligence & Reasoning (பகுத்தறிவு)</li>
-                    <li>Quantitative Aptitude (கணிதம்) மற்றும் ஆங்கில அறிவு</li>
-                </ul>
-                <h3>📥 முக்கிய லிங்க்</h3>
-                <a href="https://ssc.gov.in/" target="_blank" class="download-btn">SSC அதிகாரப்பூர்வ இணையதளம்</a>
+                <h3>📌 SSC தேர்வுகள்</h3>
+                <a href="https://ssc.gov.in/" target="_blank" class="download-btn">SSC Official Website</a>
             </div>
         </div>
 
-        <!-- பிரிவு 2: பொன்மொழிகள் -->
-        <div class="card">
-            <h2>💡 அறிஞர்களின் பொன்மொழி</h2>
-            <p><em>"உன்னால் முடியும் என்று நம்பு, உனக்குள்ளே எல்லையற்ற ஆற்றல் மறைந்துள்ளது. உன் லட்சியத்தை அடையும் வரை நில்லாது உழை!"</em><br> — <strong>சுவாமி விவேகானந்தர்</strong></p>
+        <!-- புதிய பிரிவு 2: குழந்தைகள் பகுதி (Kids Corner) -->
+        <div class="card" style="border-left-color: #ffcc00;">
+            <h2>🎈 குழந்தைகள் பகுதி (Kids Corner)</h2>
+            <p><strong>சிறுவர் விடுகதைகள்:</strong> சிந்தனையைத் தூண்டும் புதிர்கள்! விடையைக் கண்டுபிடிக்க பட்டனைக் கிளிக் செய்யவும்.</p>
+            <ul>
+                <li>
+                    <strong>விடுகதை 1:</strong> இரவில் வந்து பகலில் மறையும் வெள்ளிப் பூக்கள் எது? 
+                    <br><button class="riddle-btn" onclick="toggleRiddle('ans1')">விடை காண்க</button>
+                    <p id="ans1" class="riddle-ans">🎯 விடை: விண்மீன்கள் (நட்சத்திரங்கள்)</p>
+                </li>
+                <li style="margin-top: 15px;">
+                    <strong>விடுகதை 2:</strong> ஓடி ஓடி ஓய்ந்து படுத்தால் ஒரு முழக் கயிறு ஆகிவிடுவான். அவன் யார்?
+                    <br><button class="riddle-btn" onclick="toggleRiddle('ans2')">விடை காண்க</button>
+                    <p id="ans2" class="riddle-ans">🎯 விடை: வேஷ்டி / துணி</p>
+                </li>
+            </ul>
         </div>
 
-        <!-- பிரிவு 3: பொது அறிவு வினா-விடை (Interactive Quiz) -->
-        <div class="card">
+        <!-- புதிய பிரிவு 3: பெரியவர்கள் மற்றும் ஆரோக்கியம் -->
+        <div class="card" style="border-left-color: #28a745;">
+            <h2>🌱 பெரியவர்களுக்கான நல்வாழ்வுப் பகுதி (Life & Health)</h2>
+            <ul>
+                <li><strong>ஆரோக்கியக் குறிப்பு:</strong> "இன்றைய சிறு சேமிப்பு தான் உங்களின் நாளைய எதிர்காலம்!" பணத்தை மட்டுமின்றி தினமும் போதுமான அளவு தண்ணீர் குடித்து ஆரோக்கியத்தையும் சேமிப்போம்.</li>
+                <li><strong>டிஜிட்டல் அறிவுரை:</strong> மொபைல் போன்களைப் பயன்படுத்தும் போது கண்களுக்குப் பாதுகாப்பு தரும் 'Dark Mode' அல்லது 'Eye Comfort' வசதியை ஆன் செய்து பயன்படுத்துங்கள்.</li>
+            </ul>
+        </div>
+
+        <!-- புதிய பிரிவு 4: பொழுதுபோக்கு & கவிதைகள் (Entertainment) -->
+        <div class="card" style="border-left-color: #e83e8c;">
+            <h2>💖 பொழுதுபோக்கு & நட்புக் கவிதைகள் (Entertainment)</h2>
+            <p><strong>கவிதைத் துளிகள்:</strong></p>
+            <p style="font-style: italic; color: #ffb3d9; padding-left: 15px; border-left: 2px solid #e83e8c;">
+                "ஆயிரம் உறவுகள் வந்தாலும்தான் நம் நட்பு என்றும் மாறாது!" <br>
+                உண்மையான நட்பு காலங்களைக் கடந்தும் இதயத்தில் வாழும் ஒரு உன்னத காவியம்.
+            </p>
+        </div>
+
+        <!-- பிரிவு 5: பொது அறிவு வினா-விடை -->
+        <div class="card" style="border-left-color: #ff9933;">
             <h2>🎯 இன்றைய பொது அறிவு வினா (Interactive Quiz)</h2>
             <p><strong>கேள்வி:</strong> இந்தியாவின் மிக உயர்ந்த குடிமகன் விருது எது?</p>
-            
-            <div class="quiz-option" onclick="checkAnswer(false, 'பத்ம விபூஷண் இந்தியாவின் இரண்டாவது மிக உயர்ந்த சிவிலியன் விருது ஆகும்.')">அ) பத்ம விபூஷண்</div>
-            <div class="quiz-option" onclick="checkAnswer(true, 'சரியான விடை! பாரத ரத்னா தான் இந்தியாவின் மிக உயர்ந்த குடிமகன் விருது ஆகும். இது 1954 ஆம் ஆண்டு முதல் வழங்கப்பட்டு வருகிறது.')">ஆ) பாரத ரத்னா</div>
-            <div class="quiz-option" onclick="checkAnswer(false, 'பரம வீர சக்கரம் என்பது இந்தியாவின் மிக உயர்ந்த இராணுவ விருது (Wartime Gallantry Award) ஆகும்.')">இ) பரம வீர சக்கரம்</div>
-
+            <div class="quiz-option" onclick="checkAnswer(false, 'பத்ம விபூஷண் இரண்டாவது மிக உயர்ந்த விருது.')">அ) பத்ம விபூஷண்</div>
+            <div class="quiz-option" onclick="checkAnswer(true, 'சரியான விடை! பாரத ரத்னா தான் மிக உயர்ந்த குடிமகன் விருது.')">ஆ) பாரத ரத்னா</div>
             <div id="quiz-res" class="quiz-result"></div>
-        </div>
-
-        <!-- பிரிவு 4: பொதுச் சேவை மைய வழிகாட்டி -->
-        <div class="card">
-            <h2>📍 பொதுச் சேவை மைய வழிகாட்டி (CSC Guide)</h2>
-            <p>அரசின் சான்றிதழ்கள் (வருமான சான்றிதழ், சாதி சான்றிதழ், இருப்பிட சான்றிதழ்) மற்றும் இதர நலத்திட்டங்களுக்கு விண்ணப்பிக்கத் தேவையான ஆதார் அட்டை, ரேஷன் அட்டை, புகைப்படங்கள் மற்றும் கல்விச் சான்றிதழ்களை எப்போதும் கைவசம் டிஜிட்டல் வடிவில் சேமித்து வைத்துக் கொள்ளுங்கள். இது உங்கள் ஆன்லைன் விண்ணப்பங்களை எளிதாக்கும்.</p>
         </div>
 
     </div>
@@ -263,24 +264,33 @@
         <p>© 2026 Niyas Digital Center & Building Constructions. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
     </footer>
 
-    <!-- Interactive JavaScript Functions -->
     <script>
-        // Tab system function
+        // Tab switching logic
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+                tabcontent[i].style.display = "none";
             }
             tablinks = document.getElementsByClassName("tab-btn");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
-            document.getElementById(tabName).className += " active";
-            evt.currentTarget.className += " active";
+            document.getElementById(tabName).style.display = "block";
+            if(evt) evt.currentTarget.className += " active";
         }
 
-        // Quiz check function
+        // Riddle toggle logic
+        function toggleRiddle(id) {
+            var el = document.getElementById(id);
+            if(el.style.display === "block") {
+                el.style.display = "none";
+            } else {
+                el.style.display = "block";
+            }
+        }
+
+        // Quiz checking logic
         function checkAnswer(isCorrect, message) {
             var resDiv = document.getElementById("quiz-res");
             resDiv.style.display = "block";
@@ -289,10 +299,9 @@
                 resDiv.innerHTML = "✅ " + message;
             } else {
                 resDiv.style.color = "#ff4d4d";
-                resDiv.innerHTML = "❌ தவறான விடை! " + message;
+                resDiv.innerHTML = "❌ " + message;
             }
         }
     </script>
-
 </body>
 </html>
