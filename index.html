@@ -14,63 +14,124 @@
         }
         header {
             background-color: #1f1f1f;
-            padding: 20px;
+            padding: 25px 20px;
             text-align: center;
-            border-bottom: 2px solid #333;
+            border-bottom: 3px solid #333;
         }
         header h1 {
             color: #4da6ff;
             margin: 0;
-            font-size: 24px;
+            font-size: 26px;
+            letter-spacing: 1px;
         }
         header p {
             color: #aaa;
-            margin: 5px 0 0 0;
-            font-size: 14px;
+            margin: 8px 0 0 0;
+            font-size: 15px;
         }
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 20px auto;
-            padding: 10px;
+            padding: 15px;
         }
         .card {
             background-color: #1e1e1e;
             border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 20px;
+            padding: 20px;
+            margin-bottom: 25px;
             border-left: 5px solid #4da6ff;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
         }
         .card h2 {
             color: #ff9933;
             margin-top: 0;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            font-size: 20px;
         }
         .card p {
-            line-height: 1.6;
+            line-height: 1.7;
             color: #ccc;
+            font-size: 15px;
         }
+        
+        /* Tab System Styling */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        .tab-btn {
+            background-color: #2a2a2a;
+            color: #fff;
+            border: 1px solid #444;
+            padding: 10px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .tab-btn.active, .tab-btn:hover {
+            background-color: #4da6ff;
+            color: #121212;
+            border-color: #4da6ff;
+        }
+        .tab-content {
+            display: none;
+            background-color: #252525;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 10px;
+            border: 1px solid #333;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tab-content h3 {
+            color: #4da6ff;
+            margin-top: 0;
+            font-size: 16px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+        ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        /* Quiz Interactive Styling */
         .quiz-option {
             background-color: #2a2a2a;
-            padding: 8px 12px;
-            margin: 5px 0;
-            border-radius: 4px;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 5px;
             cursor: pointer;
             transition: 0.2s;
+            border: 1px solid #3c3c3c;
         }
         .quiz-option:hover {
-            background-color: #3a3a3a;
+            background-color: #383838;
         }
+        .quiz-result {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 16px;
+            display: none;
+        }
+
         footer {
             text-align: center;
-            padding: 20px;
-            color: #666;
-            font-size: 12px;
-            margin-top: 40px;
+            padding: 25px;
+            color: #777;
+            font-size: 13px;
+            margin-top: 50px;
             border-top: 1px solid #222;
+            background-color: #1a1a1a;
         }
     </style>
 </head>
@@ -78,43 +139,127 @@
 
     <header>
         <h1>Niyas Tamil Companion App</h1>
-        <p>மாணவர்கள் மற்றும் பொதுமக்களுக்கான தமிழ் நல்வழிகாட்டி 🚀</p>
+        <p>மாணவர்கள் மற்றும் பொதுமக்களுக்கான கல்வி மற்றும் வேலைவாய்ப்பு நல்வழிகாட்டி 🚀</p>
     </header>
 
     <div class="container">
 
-        <!-- பிரிவு 1: மாணவர் பகுதி -->
         <div class="card">
-            <h2>📚 மாணவர் பகுதி (Student Zone)</h2>
-            <p><strong>போட்டித் தேர்வு எழுதுபவர்களின் கவனத்திற்கு:</strong> TNPSC, UPSC மற்றும் SSC போன்ற தேர்வுகளுக்குத் தயாராகும் மாணவர்கள் தங்களின் லட்சியத்தை அடைய தினமும் திட்டமிட்டுப் படிப்பது அவசியம். விடாமுயற்சியே வெற்றிக்கான முதல் படி!</p>
+            <h2>📚 போட்டித் தேர்வுகள் வழிகாட்டி (Exam Hub)</h2>
+            <p>மத்திய மற்றும் மாநில அரசுத் தேர்வுகளுக்குத் தயாராகும் மாணவர்களுக்கான முக்கியப் பாடத்திட்டங்கள் மற்றும் சிறந்த புத்தகங்களின் பட்டியல் கீழே கொடுக்கப்பட்டுள்ளது. உங்களுக்குத் தேவையான தேர்வைத் தேர்ந்தெடுத்துக் கொள்ளுங்கள்:</p>
+            
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'tnpsc')">TNPSC (தமிழக அரசு)</button>
+                <button class="tab-btn" onclick="openTab(event, 'upsc')">UPSC (IAS/IPS)</button>
+                <button class="tab-btn" onclick="openTab(event, 'ssc')">SSC (மத்திய அரசு)</button>
+            </div>
+
+            <div id="tnpsc" class="tab-content active">
+                <h3>📌 TNPSC குரூப் 1, 2 & 4 பாடத்திட்டம் (Syllabus)</h3>
+                <ul>
+                    <li>பொதுத் தமிழ் / பொது ஆங்கிலம் (குரூப் 4 தேர்விற்கு மிக முக்கியம்)</li>
+                    <li>பொது அறிவு (இந்திய வரலாறு, அரசமைப்பு, புவியியல், பொருளாதாரம்)</li>
+                    <li>திறனறிவும் மனக்கணக்கு நுண்ணறிவும் (Aptitude & Mental Ability)</li>
+                    <li>தமிழ்நாட்டின் வரலாறு, பண்பாடு மற்றும் சமூக-அரசியல் இயக்கங்கள்</li>
+                </ul>
+                <h3>📖 பரிந்துரைக்கப்படும் புத்தகங்கள் (Book List)</h3>
+                <ul>
+                    <li><strong>6 முதல் 12 ஆம் வகுப்பு வரையிலான சமச்சீர் கல்விப் பாடப்புத்தகங்கள்</strong> (அறிவியல், சமூக அறிவியல், தமிழ்) - இதுவே மிக முக்கியமானது.</li>
+                    <li>கணிதத்திற்கு: கணிதவியல் பொது அறிவுப் புத்தகங்கள் (ஆர்.எஸ்.அகர்வால் அல்லது கணியன்).</li>
+                    <li>நடப்பு நிகழ்வுகள்: தினமணி, தி இந்து (தமிழ்) நாளிதழ்கள் மற்றும் மாதாந்திர நடப்பு நிகழ்வு இதழ்கள்.</li>
+                </ul>
+            </div>
+
+            <div id="upsc" class="tab-content">
+                <h3>📌 UPSC சிவில் சர்வீசஸ் பாடத்திட்டம் (Syllabus)</h3>
+                <ul>
+                    <li><strong>Preliminary Exam:</strong> Paper I (General Studies) & Paper II (CSAT - தகுதித் தேர்வு)</li>
+                    <li><strong>Main Exam:</strong> கட்டுரை (Essay), 4 பொது அறிவு தாள்கள் (GS I, II, III, IV) மற்றும் விருப்பப் பாடம் (Optional Subject)</li>
+                </ul>
+                <h3>📖 பரிந்துரைக்கப்படும் புத்தகங்கள் (Book List)</h3>
+                <ul>
+                    <li><strong>அடிப்படைப் பாடங்கள்:</strong> 6 முதல் 12 ஆம் வகுப்பு வரையிலான NCERT புத்தகங்கள் (வரலாறு, புவியியல், பொருளாதாரம்).</li>
+                    <li>இந்திய அரசமைப்பு (Polity): <em>Indian Polity</em> - M. Laxmikanth</li>
+                    <li>இந்திய வரலாறு (History): <em>Modern India</em> - Spectrum அல்லது Bipan Chandra</li>
+                    <li>பொருளாதாரம் (Economy): <em>Indian Economy</em> - Ramesh Singh அல்லது Nitin Singhania குறிப்புகள்</li>
+                    <li>செய்தித்தாள்: <em>The Hindu</em> அல்லது <em>Indian Express</em> (தினமும் படிப்பது கட்டாயம்)</li>
+                </ul>
+            </div>
+
+            <div id="ssc" class="tab-content">
+                <h3>📌 SSC CHSL / CGL பாடத்திட்டம் (Syllabus)</h3>
+                <ul>
+                    <li>பொது நுண்ணறிவு மற்றும் பகுத்தறிவு (General Intelligence & Reasoning)</li>
+                    <li>ஆங்கில அறிவு (English Language / Comprehension)</li>
+                    <li>அளவாக்கத் திறன் (Quantitative Aptitude - கணிதம்)</li>
+                    <li>பொது விழிப்புணர்வு (General Awareness - அறிவியல் மற்றும் நடப்பு நிகழ்வுகள்)</li>
+                </ul>
+                <h3>📖 பரிந்துரைக்கப்படும் புத்தகங்கள் (Book List)</h3>
+                <ul>
+                    <li>கணிதத்திற்கு (Maths): <em>Quantitative Aptitude for Competitive Examinations</em> - R.S. Aggarwal</li>
+                    <li>ஆங்கிலத்திற்கு (English): <em>Plinth to Paramout</em> - Neetu Singh அல்லது <em>Objective General English</em> - S.P. Bakshi</li>
+                    <li>Reasoning பகுதிக்கு: Verbal & Non-Verbal Reasoning - R.S. Aggarwal</li>
+                    <li>பொது அறிவு: <em>Lucent's General Knowledge</em> புத்தகம்</li>
+                </ul>
+            </div>
         </div>
 
-        <!-- பிரிவு 2: பொன்மொழிகள் -->
         <div class="card">
             <h2>💡 அறிஞர்களின் பொன்மொழி</h2>
-            <p><em>"உன்னால் முடியும் என்று நம்பு, உனக்குள்ளே எல்லையற்ற ஆற்றல் மறைந்துள்ளது."</em><br> — <strong>சுவாமி விவேகானந்தர்</strong></p>
+            <p><em>"உன்னால் முடியும் என்று நம்பு, உனக்குள்ளே எல்லையற்ற ஆற்றல் மறைந்துள்ளது. உன் லட்சியத்தை அடையும் வரை நில்லாது உழை!"</em><br> — <strong>சுவாமி விவேகானந்தர்</strong></p>
         </div>
 
-        <!-- பிரிவு 3: பொது அறிவு வினா-விடை -->
         <div class="card">
-            <h2>🎯 இன்றைய பொது அறிவு வினா (Daily Quiz)</h2>
-            <p><strong>கேள்வி:</strong> இந்தியாவின் மிக உயர்ந்த விருது எது?</p>
-            <div class="quiz-option">அ) பத்ம விபூஷண்</div>
-            <div class="quiz-option">ஆ) பாரத ரத்னா (சரியான விடை)</div>
-            <div class="quiz-option">இ) பரம வீர சக்கரம்</div>
+            <h2>🎯 இன்றைய பொது அறிவு வினா (Interactive Quiz)</h2>
+            <p><strong>கேள்வி:</strong> இந்தியாவின் மிக உயர்ந்த குடிமகன் விருது எது?</p>
+            
+            <div class="quiz-option" onclick="checkAnswer(false, 'பத்ம விபூஷண் இந்தியாவின் இரண்டாவது மிக உயர்ந்த சிவிலியன் விருது ஆகும்.')">அ) பத்ம விபூஷண்</div>
+            <div class="quiz-option" onclick="checkAnswer(true, 'சரியான விடை! பாரத ரத்னா தான் இந்தியாவின் மிக உயர்ந்த குடிமகன் விருது ஆகும். இது 1954 ஆம் ஆண்டு முதல் வழங்கப்பட்டு வருகிறது.')">ஆ) பாரத ரத்னா</div>
+            <div class="quiz-option" onclick="checkAnswer(false, 'பரம வீர சக்கரம் என்பது இந்தியாவின் மிக உயர்ந்த இராணுவ விருது (Wartime Gallantry Award) ஆகும்.')">இ) பரம வீர சக்கரம்</div>
+
+            <div id="quiz-res" class="quiz-result"></div>
         </div>
 
-        <!-- பிரிவு 4: உள்ளூர் வழிகாட்டி -->
         <div class="card">
             <h2>📍 பொதுச் சேவை மைய வழிகாட்டி (CSC Guide)</h2>
-            <p>அரசின் சான்றிதழ்கள் (வருமான சான்றிதழ், சாதி சான்றிதழ், இருப்பிட சான்றிதழ்) மற்றும் இதர நலத்திட்டங்களுக்கு விண்ணப்பிக்கத் தேவையான ஆவணங்களை எப்போதும் கைவசம் வைத்திருங்கள். இது உங்கள் நேரத்தை மிச்சப்படுத்தும்.</p>
+            <p>அரசின் சான்றிதழ்கள் (வருமான சான்றிதழ், சாதி சான்றிதழ், இருப்பிட சான்றிதழ்) மற்றும் இதர நலத்திட்டங்களுக்கு விண்ணப்பிக்கத் தேவையான ஆதார் அட்டை, ரேஷன் அட்டை, புகைப்படங்கள் மற்றும் கல்விச் சான்றிதழ்களை எப்போதும் கைவசம் டிஜிட்டல் வடிவில் சேமித்து வைத்துக் கொள்ளுங்கள். இது உங்கள் ஆன்லைன் விண்ணப்பங்களை எளிதாக்கும்.</p>
         </div>
 
     </div>
 
     <footer>
-        <p>© 2026 Niyas Digital Center. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+        <p>© 2026 Niyas Digital Center & Building Constructions. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
     </footer>
+
+    <script>
+        // Tab system function
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).className += " active";
+            evt.currentTarget.className += " active";
+        }
+
+        // Quiz check function
+        function checkAnswer(isCorrect, message) {
+            var resDiv = document.getElementById("quiz-res");
+            resDiv.style.display = "block";
+            if(isCorrect) {
+                resDiv.style.color = "#4dff4d";
+                resDiv.innerHTML = "✅ " + message;
+            } else {
+                resDiv.style.color = "#ff4d4d";
+                resDiv.innerHTML = "❌ தவறான விடை! " + message;
+            }
+        }
+    </script>
 
 </body>
 </html>
