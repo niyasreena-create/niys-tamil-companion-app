@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niyas Tamil Companion App</title>
+    <title>Sana Digital & Multi Service Center</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,10 +16,10 @@
             background-color: #1f1f1f;
             padding: 25px 20px;
             text-align: center;
-            border-bottom: 3px solid #333;
+            border-bottom: 3px solid #00ffff;
         }
         header h1 {
-            color: #4da6ff;
+            color: #00ffff;
             margin: 0;
             font-size: 26px;
             letter-spacing: 1px;
@@ -39,13 +39,16 @@
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 25px;
-            border-left: 5px solid #4da6ff;
+            border-left: 5px solid #00ffff;
             box-shadow: 0 4px 10px rgba(0,0,0,0.4);
         }
         .card h2 {
             color: #ff9933;
             margin-top: 0;
             font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         .card p {
             line-height: 1.7;
@@ -53,7 +56,7 @@
             font-size: 15px;
         }
         
-        /* Tab System Styling */
+        /* Tab System */
         .tabs {
             display: flex;
             gap: 10px;
@@ -72,9 +75,9 @@
             transition: 0.3s;
         }
         .tab-btn.active, .tab-btn:hover {
-            background-color: #4da6ff;
+            background-color: #00ffff;
             color: #121212;
-            border-color: #4da6ff;
+            border-color: #00ffff;
         }
         .tab-content {
             display: none;
@@ -88,24 +91,33 @@
             display: block;
         }
         
-        /* Button Link Styling */
-        .download-btn {
+        /* Direct Action Buttons */
+        .action-btn {
             display: inline-block;
-            background-color: #28a745;
-            color: white;
-            padding: 8px 15px;
-            margin: 5px;
-            border-radius: 4px;
+            background-color: #ff9933;
+            color: #121212;
+            padding: 10px 15px;
+            margin: 6px;
+            border-radius: 5px;
             text-decoration: none;
             font-size: 14px;
             font-weight: bold;
             transition: 0.2s;
+            border: none;
+        }
+        .action-btn:hover {
+            background-color: #e68a00;
+            color: #fff;
+        }
+        .download-btn {
+            background-color: #28a745;
+            color: white;
         }
         .download-btn:hover {
             background-color: #218838;
         }
 
-        /* Quiz Interactive Styling */
+        /* Quiz & Riddles */
         .quiz-option {
             background-color: #2a2a2a;
             padding: 12px;
@@ -118,30 +130,13 @@
         .quiz-option:hover {
             background-color: #383838;
         }
-        .quiz-result {
+        .quiz-result, .riddle-ans {
             margin-top: 15px;
             font-weight: bold;
             font-size: 16px;
             display: none;
         }
-
-        /* Riddle Styling */
-        .riddle-btn {
-            background-color: #ff9933;
-            color: #121212;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-            margin-top: 5px;
-        }
-        .riddle-ans {
-            display: none;
-            color: #4dff4d;
-            margin-top: 5px;
-            font-weight: bold;
-        }
+        .riddle-ans { color: #4dff4d; }
 
         .badge {
             background-color: #dc3545;
@@ -153,6 +148,22 @@
         }
         ul { padding-left: 20px; margin: 10px 0; }
         li { margin-bottom: 8px; line-height: 1.6; color: #ddd; }
+        
+        /* Timetable Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: #252525;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+        th { background-color: #333; color: #00ffff; }
+
         footer {
             text-align: center;
             padding: 25px;
@@ -167,89 +178,106 @@
 <body>
 
     <header>
-        <h1>Niyas Tamil Companion App</h1>
-        <p>அனைவருக்குமான கல்வி, பொழுதுபோக்கு மற்றும் நல்வழிகாட்டி 🚀</p>
+        <h1>Sana Digital & Multi Service Center</h1>
+        <p>பொதுமக்கள் மற்றும் மாணவர்களுக்கான ஆல்-இன்-ஒன் தமிழ் நல்வழிகாட்டி 🚀</p>
     </header>
 
     <div class="container">
 
-        <!-- நேரடி அறிவிப்பு பலகை -->
+        <!-- 1. நேரடி அறிவிப்பு பலகை -->
         <div class="card" style="border-left-color: #dc3545;">
-            <h2>📢 உள்ளூர் அறிவிப்புப் பலகை & நடப்பு செய்திகள் (Live Info)</h2>
+            <h2>📢 உள்ளூர் கல்வி அறிவிப்புகள் (Live Info)</h2>
             <ul>
-                <li><strong>தென்காசி மாவட்டக் கல்விச் செய்திகள்:</strong> பள்ளி மாணவர்களுக்கான NMMS (தேசிய திறனாய்வுத் தேர்வு) முடிவுகள் மற்றும் மாவட்ட வாரியான தரவரிசைப் பட்டியல்களைத் தகுந்த அரசு இணையதளத்தில் சரிபார்த்துக் கொள்ளலாம்.</li>
+                <li><span class="badge">முக்கியம்</span> <strong>தென்காசி மாவட்ட மாணவர்களுக்கான அறிவிப்பு:</strong> பள்ளி மாணவர்களுக்கான NMMS (தேசிய திறனாய்வுத் தேர்வு) தேர்வு முடிவுகள் மற்றும் மாவட்ட வாரியான தகுதி பட்டியல்களை உடனுக்குடன் சரிபார்த்துக் கொள்ள கீழே உள்ள லிங்க்கைப் பயன்படுத்தலாம்.</li>
             </ul>
         </div>
 
-        <!-- பிரிவு 1: போட்டித் தேர்வுகள் வழிகாட்டி -->
-        <div class="card" style="border-left-color: #4da6ff;">
+        <!-- 2. புதிய வசதி: பொதுச் சேவை மைய டிஜிட்டல் டெஸ்க் -->
+        <div class="card" style="border-left-color: #28a745;">
+            <h2>🏛️ அரசு ஆன்லைன் சேவைகள் (CSC Digital Desk)</h2>
+            <p>சான்றிதழ்கள் மற்றும் முக்கிய அரசுத் திட்டங்களுக்கு ஆன்லைனில் விண்ணப்பிப்பதற்கான அதிகாரப்பூர்வ இணையதளங்களின் நேரடி லிங்க்குகள்:</p>
+            <a href="https://www.tnesevai.tn.gov.in/" target="_blank" class="action-btn">வருமானம் / சாதி சான்றிதழ் ஈ-சேவை</a>
+            <a href="https://uidai.gov.in/" target="_blank" class="action-btn">ஆதார் அட்டை சேவைகள்</a>
+            <a href="https://www.tnpds.gov.in/" target="_blank" class="action-btn">ஸ்மார்ட் ரேஷன் கார்டு போர்டல்</a>
+        </div>
+
+        <!-- 3. புதிய வசதி: உள்ளூர் பேருந்து நேரங்கள் -->
+        <div class="card" style="border-left-color: #ff9933;">
+            <h2>🚌 கடையநல்லூர் - தென்காசி பேருந்து நேரங்கள் (Local Transport)</h2>
+            <p>பொதுமக்கள் எளிதாகப் பயணங்களைத் திட்டமிட முக்கியப் பேருந்து வழித்தடங்களின் நேர விவரங்கள்:</p>
+            <table>
+                <tr>
+                    <th>புறப்படும் இடம்</th>
+                    <th>செல்லும் இடம்</th>
+                    <th>வகை / முக்கிய நேரம்</th>
+                </tr>
+                <tr>
+                    <td>கடையநல்லூர்</td>
+                    <td>தென்காசி</td>
+                    <td>ஒவ்வொரு 10-15 நிமிடங்களுக்கும் ஒரு உள்ளூர் பேருந்து வசதி உள்ளது.</td>
+                </tr>
+                <tr>
+                    <td>தென்காசி</td>
+                    <td>கடையநல்லூர் / புளியங்குடி</td>
+                    <td>டவுன் பஸ் மற்றும் மதுரை மார்க்கப் பேருந்துகள் (வழக்கமான சேவைகள்).</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 4. போட்டித் தேர்வுகள் வழிகாட்டி -->
+        <div class="card" style="border-left-color: #00ffff;">
             <h2>📚 போட்டித் தேர்வுகள் மற்றும் பாடப்புத்தகங்கள் (Exam Hub)</h2>
             <div class="tabs">
-                <button class="tab-btn active" onclick="openTab(evt, 'tnpsc')">TNPSC (தமிழக அரசு)</button>
-                <button class="tab-btn" onclick="openTab(evt, 'upsc')">UPSC (IAS/IPS)</button>
-                <button class="tab-btn" onclick="openTab(evt, 'ssc')">SSC (மத்திய அரசு)</button>
+                <button class="tab-btn active" onclick="openTab(event, 'tnpsc')">TNPSC (தமிழக அரசு)</button>
+                <button class="tab-btn" onclick="openTab(event, 'upsc')">UPSC (IAS/IPS)</button>
+                <button class="tab-btn" onclick="openTab(event, 'ssc')">SSC (மத்திய அரசு)</button>
             </div>
 
             <div id="tnpsc" class="tab-content active">
-                <h3>📌 TNPSC பாடத்திட்டம் (Syllabus)</h3>
+                <h3>📌 TNPSC குரூப் 1, 2 & 4 பாடத்திட்டம் (Syllabus)</h3>
                 <ul>
-                    <li>பொதுத் தமிழ் / பொது ஆங்கிலம், பொது அறிவு, மற்றும் திறனறிவும் மனக்கணக்கு நுண்ணறிவும்.</li>
+                    <li>பொதுத் தமிழ், பொது அறிவு, மற்றும் திறனறிவும் மனக்கணக்கு நுண்ணறிவும்.</li>
                 </ul>
-                <h3>📥 சமச்சீர் கல்விப் புத்தகங்கள்</h3>
-                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="download-btn">6-ஆம் வகுப்பு</a>
-                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="download-btn">8-ஆம் வகுப்பு</a>
-                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="download-btn">10-ஆம் வகுப்பு</a>
-                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="download-btn">12-ஆம் வகுப்பு</a>
+                <h3>📥 சமச்சீர் கல்விப் புத்தகங்கள் (PDF பதிவிறக்கம்)</h3>
+                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="action-btn download-btn">6-ஆம் வகுப்பு புத்தகங்கள்</a>
+                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="action-btn download-btn">8-ஆம் வகுப்பு புத்தகங்கள்</a>
+                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="action-btn download-btn">10-ஆம் வகுப்பு புத்தகங்கள்</a>
             </div>
-            <!-- (UPSC & SSC tabs handle standard click toggle via JS below) -->
+            
             <div id="upsc" class="tab-content">
                 <h3>📌 UPSC சிவில் சர்வீசஸ்</h3>
-                <a href="https://ncert.nic.in/textbook.php" target="_blank" class="download-btn">NCERT Books PDF</a>
+                <a href="https://ncert.nic.in/textbook.php" target="_blank" class="action-btn download-btn">NCERT Books PDF</a>
             </div>
+            
             <div id="ssc" class="tab-content">
                 <h3>📌 SSC தேர்வுகள்</h3>
-                <a href="https://ssc.gov.in/" target="_blank" class="download-btn">SSC Official Website</a>
+                <a href="https://ssc.gov.in/" target="_blank" class="action-btn download-btn">SSC Official Website</a>
             </div>
         </div>
 
-        <!-- புதிய பிரிவு 2: குழந்தைகள் பகுதி (Kids Corner) -->
+        <!-- 5. குழந்தைகள் பகுதி -->
         <div class="card" style="border-left-color: #ffcc00;">
             <h2>🎈 குழந்தைகள் பகுதி (Kids Corner)</h2>
-            <p><strong>சிறுவர் விடுகதைகள்:</strong> சிந்தனையைத் தூண்டும் புதிர்கள்! விடையைக் கண்டுபிடிக்க பட்டனைக் கிளிக் செய்யவும்.</p>
+            <p><strong>சிறுவர் விடுகதைகள்:</strong> விடையைக் கண்டுபிடிக்க பட்டனைக் கிளிக் செய்யவும்!</p>
             <ul>
                 <li>
-                    <strong>விடுகதை 1:</strong> இரவில் வந்து பகலில் மறையும் வெள்ளிப் பூக்கள் எது? 
-                    <br><button class="riddle-btn" onclick="toggleRiddle('ans1')">விடை காண்க</button>
+                    <strong>விடுகதை:</strong> இரவில் வந்து பகலில் மறையும் வெள்ளிப் பூக்கள் எது? 
+                    <button class="action-btn" style="padding: 4px 10px; font-size:12px;" onclick="toggleRiddle('ans1')">விடை காண்க</button>
                     <p id="ans1" class="riddle-ans">🎯 விடை: விண்மீன்கள் (நட்சத்திரங்கள்)</p>
                 </li>
-                <li style="margin-top: 15px;">
-                    <strong>விடுகதை 2:</strong> ஓடி ஓடி ஓய்ந்து படுத்தால் ஒரு முழக் கயிறு ஆகிவிடுவான். அவன் யார்?
-                    <br><button class="riddle-btn" onclick="toggleRiddle('ans2')">விடை காண்க</button>
-                    <p id="ans2" class="riddle-ans">🎯 விடை: வேஷ்டி / துணி</p>
-                </li>
             </ul>
         </div>
 
-        <!-- புதிய பிரிவு 3: பெரியவர்கள் மற்றும் ஆரோக்கியம் -->
-        <div class="card" style="border-left-color: #28a745;">
-            <h2>🌱 பெரியவர்களுக்கான நல்வாழ்வுப் பகுதி (Life & Health)</h2>
-            <ul>
-                <li><strong>ஆரோக்கியக் குறிப்பு:</strong> "இன்றைய சிறு சேமிப்பு தான் உங்களின் நாளைய எதிர்காலம்!" பணத்தை மட்டுமின்றி தினமும் போதுமான அளவு தண்ணீர் குடித்து ஆரோக்கியத்தையும் சேமிப்போம்.</li>
-                <li><strong>டிஜிட்டல் அறிவுரை:</strong> மொபைல் போன்களைப் பயன்படுத்தும் போது கண்களுக்குப் பாதுகாப்பு தரும் 'Dark Mode' அல்லது 'Eye Comfort' வசதியை ஆன் செய்து பயன்படுத்துங்கள்.</li>
-            </ul>
-        </div>
-
-        <!-- புதிய பிரிவு 4: பொழுதுபோக்கு & கவிதைகள் (Entertainment) -->
+        <!-- 6. பொழுதுபோக்கு & கவிதைகள் -->
         <div class="card" style="border-left-color: #e83e8c;">
             <h2>💖 பொழுதுபோக்கு & நட்புக் கவிதைகள் (Entertainment)</h2>
-            <p><strong>கவிதைத் துளிகள்:</strong></p>
             <p style="font-style: italic; color: #ffb3d9; padding-left: 15px; border-left: 2px solid #e83e8c;">
                 "ஆயிரம் உறவுகள் வந்தாலும்தான் நம் நட்பு என்றும் மாறாது!" <br>
                 உண்மையான நட்பு காலங்களைக் கடந்தும் இதயத்தில் வாழும் ஒரு உன்னத காவியம்.
             </p>
         </div>
 
-        <!-- பிரிவு 5: பொது அறிவு வினா-விடை -->
+        <!-- 7. பொது அறிவு வினா-விடை -->
         <div class="card" style="border-left-color: #ff9933;">
             <h2>🎯 இன்றைய பொது அறிவு வினா (Interactive Quiz)</h2>
             <p><strong>கேள்வி:</strong> இந்தியாவின் மிக உயர்ந்த குடிமகன் விருது எது?</p>
@@ -261,11 +289,10 @@
     </div>
 
     <footer>
-        <p>© 2026 Niyas Digital Center & Building Constructions. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+        <p>© 2026 Sana Digital & Multi Service Center. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
     </footer>
 
     <script>
-        // Tab switching logic
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tab-content");
@@ -277,20 +304,14 @@
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
             document.getElementById(tabName).style.display = "block";
-            if(evt) evt.currentTarget.className += " active";
+            evt.currentTarget.className += " active";
         }
 
-        // Riddle toggle logic
         function toggleRiddle(id) {
             var el = document.getElementById(id);
-            if(el.style.display === "block") {
-                el.style.display = "none";
-            } else {
-                el.style.display = "block";
-            }
+            el.style.display = (el.style.display === "block") ? "none" : "block";
         }
 
-        // Quiz checking logic
         function checkAnswer(isCorrect, message) {
             var resDiv = document.getElementById("quiz-res");
             resDiv.style.display = "block";
