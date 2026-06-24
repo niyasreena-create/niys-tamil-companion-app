@@ -88,7 +88,7 @@
             display: block;
         }
         
-        /* Action Buttons with direct external navigation */
+        /* Action Buttons */
         .action-btn {
             display: inline-block;
             background-color: #ff9933;
@@ -113,6 +113,14 @@
         }
         .download-btn:hover {
             background-color: #218838;
+            color: white;
+        }
+        .youtube-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .youtube-btn:hover {
+            background-color: #b21f2d;
             color: white;
         }
 
@@ -182,29 +190,37 @@
 
     <div class="container">
 
-        <!-- 1. நேரடி அறிவிப்பு பலகை -->
+        <div class="card" style="border-left-color: #dc3545;">
+            <h2>🎥 எங்களது YouTube சேனல்கள் (Official YouTube)</h2>
+            <p>நமது சேனல்களை சப்ஸ்கிரைப் செய்து, பயனுள்ள தகவல்களையும் கடையநல்லூர் கன்ஸ்ட்ரக்ஷன் வீடியோக்களையும் உடனுக்குடன் தெரிந்துகொள்ளுங்கள்:</p>
+            <a href="https://www.youtube.com/" target="_blank" class="action-btn youtube-btn">➜ எங்களது YouTube சேனல் செல்ல</a>
+            <a href="https://www.youtube.com/" target="_blank" class="action-btn youtube-btn">➜ நியாஸ் கம்பெனி சேனல் செல்ல</a>
+        </div>
+
+        <div class="card" style="border-left-color: #9b59b6;">
+            <h2>🏗️ நியாஸ் கன்ஸ்ட்ரக்ஷன்ஸ் & டிஜிட்டல் சென்டர்</h2>
+            <p><strong>Sana Digital & Multi Service Center:</strong> ஆன்லைன் சான்றிதழ் விண்ணப்பங்கள், ஆதார், ஸ்மார்ட் கார்டு வேலைகள் சிறந்த முறையில் செய்து தரப்படும்.</p>
+            <p><strong>Niyas Building Constructions:</strong> உங்கள் கனவு இல்லங்களை கடையநல்லூர் மற்றும் தென்காசி மாவட்ட சுற்றியுள்ள பகுதிகளில் தரமான முறையில், இன்ஜினியரிங் பிளான் படி கட்டித் தருகிறோம்.</p>
+        </div>
+
         <div class="card" style="border-left-color: #dc3545;">
             <h2>📢 உள்ளூர் கல்வி அறிவிப்புகள் (Live Info)</h2>
             <ul>
-                <li><span class="badge">முக்கியம்</span> <strong>NMMS தேர்வு முடிவுகள்:</strong> தென்காசி மாவட்ட பள்ளி மாணவர்களுக்கான தேசிய திறனாய்வுத் தேர்வு முடிவுகள் மற்றும் விபரங்களை அறிந்துகொள்ள கீழே உள்ள அதிகாரப்பூர்வ லிங்க்கை நேரடியாகப் பயன்படுத்தலாம்.</li>
+                <li><span class="badge">முக்கியம்</span> <strong>NMMS தேர்வு முடிவுகள்:</strong> தென்காசி மாவட்ட பள்ளி மாணவர்களுக்கான தேசிய திறனாய்வுத் தேர்வு முடிவுகள் மற்றும் விபரங்களை அறிய கீழே உள்ள லிங்க்கைப் பயன்படுத்தலாம்.</li>
             </ul>
             <a href="https://dge.tn.gov.in/" target="_blank" class="action-btn" style="background-color: #dc3545; color: white;">NMMS ரிசல்ட் நேரடி பக்கம் செல்ல ➜</a>
         </div>
 
-        <!-- 2. அரசு ஆன்லைன் சேவைகள் (Direct Links) -->
         <div class="card" style="border-left-color: #28a745;">
             <h2>🏛️ அரசு ஆன்லைன் சேவைகள் (CSC Digital Desk)</h2>
-            <p>கீழே உள்ள பட்டன்களைக் கிளிக் செய்தால், நீங்கள் தேடும் குறிப்பிட்ட அரசுத் துறையின் அதிகாரப்பூர்வ விண்ணப்பப் பக்கத்திற்கு நேரடியாகச் செல்லலாம்:</p>
-            
+            <p>கீழே உள்ள பட்டன்களைக் கிளிக் செய்தால், குறிப்பிட்ட அரசுத் துறையின் அதிகாரப்பூர்வ விண்ணப்பப் பக்கத்திற்கு நேரடியாகச் செல்லலாம்:</p>
             <a href="https://www.tnesevai.tn.gov.in/Citizen/Registration.aspx" target="_blank" class="action-btn">வருமானம் / சாதி சான்றிதழ் விண்ணப்பிக்க ➜</a>
             <a href="https://myaadhaar.uidai.gov.in/" target="_blank" class="action-btn">ஆதார் கார்டு டவுன்லோட் & அப்டேட் ➜</a>
             <a href="https://www.tnpds.gov.in/pages/smartcard/smartcard-status.xhtml" target="_blank" class="action-btn">ஸ்மார்ட் ரேஷன் கார்டு நிலை அறிய ➜</a>
         </div>
 
-        <!-- 3. உள்ளூர் பேருந்து நேரங்கள் -->
         <div class="card" style="border-left-color: #ff9933;">
             <h2>🚌 கடையநல்லூர் - தென்காசி பேருந்து வழித்தடங்கள் (Local Transport)</h2>
-            <p>பொதுமக்கள் மற்றும் வியாபாரிகள் பயன்பாட்டிற்காகத் துல்லியமான நேர விவரங்கள்:</p>
             <table>
                 <tr>
                     <th>புறப்படும் இடம்</th>
@@ -214,7 +230,7 @@
                 <tr>
                     <td>கடையநல்லூர்</td>
                     <td>தென்காசி</td>
-                    <td>காலை 06:00 மணி முதல் இரவு 10:30 மணி வரை (ஒவ்வொரு 10 நிமிடத்திற்கும் டவுன் பஸ் மற்றும் மதுரை-தென்காசி பஸ்கள் உள்ளன).</td>
+                    <td>காலை 06:00 மணி முதல் இரவு 10:30 மணி வரை (ஒவ்வொரு 10 நிமிடத்திற்கும் பஸ் வசதி உள்ளது).</td>
                 </tr>
                 <tr>
                     <td>தென்காசி</td>
@@ -224,11 +240,8 @@
             </table>
         </div>
 
-        <!-- 4. போட்டித் தேர்வுகள் வழிகாட்டி -->
         <div class="card" style="border-left-color: #00ffff;">
             <h2>📚 போட்டித் தேர்வுகள் மற்றும் பாடப்புத்தகங்கள் (Exam Hub)</h2>
-            <p>தேவையின் பேரில் பாடத்திட்ட விவரங்களை அறியவும், ஒரிஜினல் அரசு புத்தகங்களை நேரடியாக பிடிஎஃப் வடிவில் டவுன்லோட் செய்யவும் பட்டன்களை அழுத்தவும்:</p>
-            
             <div class="tabs">
                 <button class="tab-btn active" onclick="openTab(event, 'tnpsc')">TNPSC (தமிழக அரசு)</button>
                 <button class="tab-btn" onclick="openTab(event, 'upsc')">UPSC (IAS/IPS)</button>
@@ -236,26 +249,19 @@
             </div>
 
             <div id="tnpsc" class="tab-content active">
-                <h3>📌 TNPSC பாடப்புத்தகங்கள் நேரடி டவுன்லோட் லிங்க்குகள்:</h3>
-                <p>கிளிக் செய்தவுடன் தமிழ்நாடு அரசின் சமச்சீர் கல்விப் புத்தகங்கள் டவுன்லோட் செய்யும் பிரத்யேகப் பக்கத்திற்குச் செல்லும்:</p>
-                <a href="https://www.textbooksonline.tn.nic.in/StandardVI.htm" target="_blank" class="action-btn download-btn">6-ஆம் வகுப்பு புத்தகங்கள் ➜</a>
-                <a href="https://www.textbooksonline.tn.nic.in/StandardVIII.htm" target="_blank" class="action-btn download-btn">8-ஆம் வகுப்பு புத்தகங்கள் ➜</a>
-                <a href="https://www.textbooksonline.tn.nic.in/StandardX.htm" target="_blank" class="action-btn download-btn">10-ஆம் வகுப்பு புத்தகங்கள் ➜</a>
-                <a href="https://www.textbooksonline.tn.nic.in/StandardXII.htm" target="_blank" class="action-btn download-btn">12-ஆம் வகுப்பு புத்தகங்கள் ➜</a>
+                <h3>📌 TNPSC & பள்ளிப் பாடப்புத்தகங்கள் நேரடி டவுன்லோட் பக்கம்:</h3>
+                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="action-btn download-btn" style="width: 90%; text-align: center;">➜ சமச்சீர் கல்விப் புத்தகங்கள் நேரடிப் பக்கம் செல்ல கிளிக் செய்யவும்</a>
             </div>
-            
             <div id="upsc" class="tab-content">
                 <h3>📌 UPSC NCERT புத்தகங்கள்</h3>
                 <a href="https://ncert.nic.in/textbook.php" target="_blank" class="action-btn download-btn">NCERT ஒரிஜினல் புத்தகங்கள் பக்கம் செல்ல ➜</a>
             </div>
-            
             <div id="ssc" class="tab-content">
                 <h3>📌 SSC அதிகாரப்பூர்வ போர்ட்டல்</h3>
                 <a href="https://ssc.gov.in/portal/apply" target="_blank" class="action-btn download-btn">SSC ஆன்லைன் விண்ணப்பப் பக்கம் ➜</a>
             </div>
         </div>
 
-        <!-- 5. குழந்தைகள் பகுதி -->
         <div class="card" style="border-left-color: #ffcc00;">
             <h2>🎈 குழந்தைகள் பகுதி (Kids Corner)</h2>
             <p><strong>சிறுவர் விடுகதைகள்:</strong> விடையைக் கண்டுபிடிக்க பட்டனைக் கிளிக் செய்யவும்!</p>
@@ -263,12 +269,11 @@
                 <li>
                     <strong>விடுகதை:</strong> இரவில் வந்து பகலில் மறையும் வெள்ளிப் பூக்கள் எது? 
                     <button class="action-btn" style="padding: 4px 10px; font-size:12px; margin:0 5px;" onclick="toggleRiddle('ans1')">விடை காண்க</button>
-                    <p id="ans1" class="riddle-ans">🎯 விடை: விண்மீன்கள் (நட்சத்திரங்கள்)</p>
+                    <p id="ans1" class="riddle-ans">🎯 விடை: விண்மீன்கள் (நвичайно நட்சத்திரங்கள்)</p>
                 </li>
             </ul>
         </div>
 
-        <!-- 6. பொழுதுபோக்கு & கவிதைகள் -->
         <div class="card" style="border-left-color: #e83e8c;">
             <h2>💖 பொழுதுபோக்கு & நட்புக் கவிதைகள் (Entertainment)</h2>
             <p style="font-style: italic; color: #ffb3d9; padding-left: 15px; border-left: 2px solid #e83e8c;">
@@ -277,7 +282,6 @@
             </p>
         </div>
 
-        <!-- 7. பொது அறிவு வினா-விடை -->
         <div class="card" style="border-left-color: #ff9933;">
             <h2>🎯 இன்றைய பொது அறிவு வினா (Interactive Quiz)</h2>
             <p><strong>கேள்வி:</strong> இந்தியாவின் மிக உயர்ந்த குடிமகன் விருது எது?</p>
