@@ -12,23 +12,39 @@
             margin: 0;
             padding: 0;
         }
+        
+        /* லோகோ மற்றும் ஹெட்டர் வடிவமைப்பு */
         header {
-            background-color: #1f1f1f;
-            padding: 25px 20px;
+            background: linear-gradient(135deg, #1f1f1f, #2d2d2d);
+            padding: 30px 20px;
             text-align: center;
-            border-bottom: 3px solid #00ffff;
+            border-bottom: 4px solid #00ffff;
+            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
         }
-        header h1 {
+        .logo-box {
+            display: inline-block;
+            border: 3px solid #00ffff;
+            padding: 10px 20px;
+            border-radius: 12px;
+            background-color: #121212;
+            margin-bottom: 10px;
+            box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+        .logo-text {
             color: #00ffff;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
             margin: 0;
-            font-size: 26px;
-            letter-spacing: 1px;
+            text-transform: uppercase;
         }
         header p {
-            color: #aaa;
-            margin: 8px 0 0 0;
-            font-size: 15px;
+            color: #ff9933;
+            margin: 10px 0 0 0;
+            font-size: 16px;
+            font-weight: 500;
         }
+        
         .container {
             max-width: 850px;
             margin: 20px auto;
@@ -53,42 +69,7 @@
             font-size: 15px;
         }
         
-        /* Tab System */
-        .tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-        .tab-btn {
-            background-color: #2a2a2a;
-            color: #fff;
-            border: 1px solid #444;
-            padding: 10px 18px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-        .tab-btn.active, .tab-btn:hover {
-            background-color: #00ffff;
-            color: #121212;
-            border-color: #00ffff;
-        }
-        .tab-content {
-            display: none;
-            background-color: #252525;
-            padding: 15px;
-            border-radius: 6px;
-            margin-top: 10px;
-            border: 1px solid #333;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        
-        /* Action Buttons */
+        /* பட்டன்கள் */
         .action-btn {
             display: inline-block;
             background-color: #ff9933;
@@ -107,68 +88,48 @@
             background-color: #00ffff;
             color: #121212;
         }
-        .download-btn {
-            background-color: #28a745;
-            color: white;
-        }
-        .download-btn:hover {
-            background-color: #218838;
-            color: white;
-        }
-        .youtube-btn {
-            background-color: #dc3545;
-            color: white;
-        }
-        .youtube-btn:hover {
-            background-color: #b21f2d;
-            color: white;
-        }
-
-        /* Quiz & Riddles */
-        .quiz-option {
-            background-color: #2a2a2a;
-            padding: 12px;
-            margin: 8px 0;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.2s;
-            border: 1px solid #3c3c3c;
-        }
-        .quiz-option:hover {
-            background-color: #383838;
-        }
-        .quiz-result, .riddle-ans {
-            margin-top: 15px;
-            font-weight: bold;
-            font-size: 16px;
-            display: none;
-        }
-        .riddle-ans { color: #4dff4d; }
-
-        .badge {
-            background-color: #dc3545;
-            color: white;
-            padding: 3px 8px;
-            border-radius: 3px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-        ul { padding-left: 20px; margin: 10px 0; }
-        li { margin-bottom: 8px; line-height: 1.6; color: #ddd; }
+        .download-btn { background-color: #28a745; color: white; }
+        .download-btn:hover { background-color: #218838; color: white; }
         
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            background-color: #252525;
+        .youtube-btn { background-color: #dc3545; color: white; }
+        .youtube-btn:hover { background-color: #b21f2d; color: white; }
+        
+        .blog-btn { background-color: #e67e22; color: white; }
+        .blog-btn:hover { background-color: #d35400; color: white; }
+        
+        .contact-btn { background-color: #3498db; color: white; }
+        .whatsapp-btn { background-color: #25d366; color: white; }
+        .whatsapp-btn:hover { background-color: #128c7e; color: white; }
+
+        /* டேப் சிஸ்டம் */
+        .tabs { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+        .tab-btn {
+            background-color: #2a2a2a; color: #fff; border: 1px solid #444;
+            padding: 10px 18px; border-radius: 5px; cursor: pointer; font-weight: bold;
         }
-        th, td {
-            border: 1px solid #444;
-            padding: 10px;
-            text-align: left;
-            font-size: 14px;
-        }
+        .tab-btn.active, .tab-btn:hover { background-color: #00ffff; color: #121212; border-color: #00ffff; }
+        .tab-content { display: none; background-color: #252525; padding: 15px; border-radius: 6px; border: 1px solid #333; }
+        .tab-content.active { display: block; }
+
+        /* அட்டவணை மற்றும் பிற கூறுகள் */
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; background-color: #252525; }
+        th, td { border: 1px solid #444; padding: 10px; text-align: left; font-size: 14px; }
         th { background-color: #333; color: #00ffff; }
+        .badge { background-color: #dc3545; color: white; padding: 3px 8px; border-radius: 3px; font-size: 12px; font-weight: bold; }
+        .riddle-ans { color: #4dff4d; display: none; font-weight: bold; margin-top: 15px; }
+        .quiz-option { background-color: #2a2a2a; padding: 12px; margin: 8px 0; border-radius: 5px; cursor: pointer; border: 1px solid #3c3c3c; }
+        .quiz-option:hover { background-color: #383838; }
+        .quiz-result { margin-top: 15px; font-weight: bold; display: none; }
+
+        .address-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #ddd;
+            background: #252525;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #333;
+        }
 
         footer {
             text-align: center;
@@ -184,17 +145,34 @@
 <body>
 
     <header>
+        <div class="logo-box">
+            <div class="logo-text">SANA DIGITAL</div>
+        </div>
         <h1>Sana Digital & Multi Service Center</h1>
-        <p>பொதுமக்கள் மற்றும் மாணவர்களுக்கான நேரடி ஆன்லைன் சேவை போர்ட்டல் 🚀</p>
+        <p>பொதுமக்கள் மற்றும் மாணவர்களுக்கான ஆல்-இன்-ஒன் தமிழ் நல்வழிகாட்டி 🚀</p>
     </header>
 
     <div class="container">
 
+        <div class="card" style="border-left-color: #3498db;">
+            <h2>📞 தொடர்பு மற்றும் முகவரி விபரங்கள் (Contact Us)</h2>
+            <p>எங்களது டிஜிட்டல் மையம் மற்றும் கட்டுமான சேவைகளுக்குக் கீழே உள்ள முகவரியிலோ அல்லது மொபைல் எண்களிலோ தொடர்பு கொள்ளலாம்:</p>
+            <div class="address-text">
+                📍 <strong>முகவரி:</strong> தக்பாபள்ளி தெற்கு வடக்கு தெரு (Takwapalli South North street), ரஹ்மானியபுரம் மேற்கு, கடையநல்லூர்.<br>
+                📌 <strong>பின்கோடு:</strong> 627759 <br>
+                📱 <strong>அலைபேசி:</strong> 9489159454
+            </div>
+            <div style="margin-top: 15px;">
+                <a href="tel:9489159454" class="action-btn contact-btn">📞 நேரடியாக அழைக்க கிளிக் செய்க</a>
+                <a href="https://wa.me/9489159454" target="_blank" class="action-btn whatsapp-btn">💬 வாட்ஸ்அப்பில் பேச கிளிக் செய்க</a>
+            </div>
+        </div>
+
         <div class="card" style="border-left-color: #dc3545;">
-            <h2>🎥 எங்களது YouTube சேனல்கள் (Official YouTube)</h2>
-            <p>நமது சேனல்களை சப்ஸ்கிரைப் செய்து, பயனுள்ள தகவல்களையும் கடையநல்லூர் கன்ஸ்ட்ரக்ஷன் வீடியோக்களையும் உடனுக்குடன் தெரிந்துகொள்ளுங்கள்:</p>
-            <a href="https://www.youtube.com/" target="_blank" class="action-btn youtube-btn">➜ எங்களது YouTube சேனல் செல்ல</a>
-            <a href="https://www.youtube.com/" target="_blank" class="action-btn youtube-btn">➜ நியாஸ் கம்பெனி சேனல் செல்ல</a>
+            <h2>🎥 எங்களது அதிகாரப்பூர்வ தளங்கள் (Follow Us)</h2>
+            <p>தொழில்நுட்ப செய்திகள், பயனுள்ள வீடியோக்கள் மற்றும் கம்ப்யூட்டர் தகவல்களைப் பெற எங்களது தளங்களை பின்தொடரவும்:</p>
+            <a href="https://www.youtube.com/@lifemediatamil" target="_blank" class="action-btn youtube-btn">➜ Life Media Tamil YouTube</a>
+            <a href="https://www.niyascomputers.blogspot.com" target="_blank" class="action-btn blog-btn">➜ Niyas Computers Blogspot</a>
         </div>
 
         <div class="card" style="border-left-color: #9b59b6;">
@@ -213,7 +191,7 @@
 
         <div class="card" style="border-left-color: #28a745;">
             <h2>🏛️ அரசு ஆன்லைன் சேவைகள் (CSC Digital Desk)</h2>
-            <p>கீழே உள்ள பட்டன்களைக் கிளிக் செய்தால், குறிப்பிட்ட அரசுத் துறையின் அதிகாரப்பூர்வ விண்ணப்பப் பக்கத்திற்கு நேரடியாகச் செல்லலாம்:</p>
+            <p>அதிகாரப்பூர்வ அரசு இணையதளங்களின் நேரடி பக்கங்களுக்குச் செல்ல கீழே உள்ள பட்டன்களை அழுத்தவும்:</p>
             <a href="https://www.tnesevai.tn.gov.in/Citizen/Registration.aspx" target="_blank" class="action-btn">வருமானம் / சாதி சான்றிதழ் விண்ணப்பிக்க ➜</a>
             <a href="https://myaadhaar.uidai.gov.in/" target="_blank" class="action-btn">ஆதார் கார்டு டவுன்லோட் & அப்டேட் ➜</a>
             <a href="https://www.tnpds.gov.in/pages/smartcard/smartcard-status.xhtml" target="_blank" class="action-btn">ஸ்மார்ட் ரேஷன் கார்டு நிலை அறிய ➜</a>
@@ -230,12 +208,12 @@
                 <tr>
                     <td>கடையநல்லூர்</td>
                     <td>தென்காசி</td>
-                    <td>காலை 06:00 மணி முதல் இரவு 10:30 மணி வரை (ஒவ்வொரு 10 நிமிடத்திற்கும் பஸ் வசதி உள்ளது).</td>
+                    <td>காலை 06:00 மணி முதல் இரவு 10:30 மணி வரை (ஒவ்வொரு 10 நிமிடத்திற்கும் தொடர்ச்சியான பஸ் வசதி உள்ளது).</td>
                 </tr>
                 <tr>
                     <td>தென்காசி</td>
                     <td>கடையநல்லூர்</td>
-                    <td>காலை 05:30 மணி முதல் இரவு 11:00 மணி வரை தொடர்ச்சியான பேருந்து வசதிகள் உள்ளன.</td>
+                    <td>காலை 05:30 மணி முதல் இரவு 11:00 மணி வரை பேருந்து வசதிகள் உள்ளன.</td>
                 </tr>
             </table>
         </div>
@@ -269,7 +247,7 @@
                 <li>
                     <strong>விடுகதை:</strong> இரவில் வந்து பகலில் மறையும் வெள்ளிப் பூக்கள் எது? 
                     <button class="action-btn" style="padding: 4px 10px; font-size:12px; margin:0 5px;" onclick="toggleRiddle('ans1')">விடை காண்க</button>
-                    <p id="ans1" class="riddle-ans">🎯 விடை: விண்மீன்கள் (நвичайно நட்சத்திரங்கள்)</p>
+                    <p id="ans1" class="riddle-ans">🎯 விடை: விண்மீன்கள் (நட்சத்திரங்கள்)</p>
                 </li>
             </ul>
         </div>
