@@ -18,22 +18,19 @@
         h1 { color: #ffffff; margin: 5px 0 0 0; font-size: 22px; }
         .tagline { color: #ff9933; margin-top: 5px; font-size: 14px; }
         
-        /* புதிய ஸ்க்ரோலிங் ஓடும் செய்தி பகுதி (Scrolling News) */
+        /* ஸ்க்ரோலிங் ஓடும் செய்தி */
         .ticker-wrap {
             background-color: #ff3333; color: white; padding: 8px 0;
             font-weight: bold; font-size: 14px; overflow: hidden;
             box-shadow: 0 2px 5px rgba(0,0,0,0.3);
         }
-        marquee { vertical-align: middle; }
 
         .container { max-width: 850px; margin: 20px auto; padding: 15px; }
-        
-        /* கார்டு வடிவமைப்பு */
         .card { background-color: #1e1e1e; border-radius: 8px; padding: 20px; margin-bottom: 25px; border-left: 5px solid #00ffff; box-shadow: 0 4px 10px rgba(0,0,0,0.4); }
         .card h2 { color: #ff9933; margin-top: 0; font-size: 19px; border-bottom: 1px solid #333; padding-bottom: 8px; }
         .card p { line-height: 1.7; color: #ccc; font-size: 15px; }
 
-        /* புதிய கன்ஸ்ட்ரக்ஷன் இமேஜ் பாக்ஸ் */
+        /* கன்ஸ்ட்ரக்ஷன் இமேஜ் பாக்ஸ் திருத்தம் */
         .image-box {
             text-align: center; margin: 15px 0; background: #252525;
             padding: 10px; border-radius: 6px; border: 1px solid #444;
@@ -41,9 +38,10 @@
         .construction-img {
             max-width: 100%; height: auto; border-radius: 4px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            border: 2px solid #ff9933;
         }
         
-        /* பொத்தான்கள் (Buttons) */
+        /* பட்டன்கள் */
         .action-btn { display: inline-block; background-color: #ff9933; color: #121212; padding: 10px 16px; margin: 6px 4px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.2s; }
         .action-btn:hover { background-color: #00ffff; color: #121212; }
         .contact-box { background: #252525; padding: 15px; border-radius: 8px; border: 1px solid #333; line-height: 1.8; }
@@ -78,6 +76,7 @@
 
     <div class="container">
 
+        <!-- முகவரி மற்றும் தொடர்பு விபரங்கள் -->
         <div class="card" style="border-left-color: #3498db;">
             <h2>📞 தொடர்பு மற்றும் முகவரி விபரங்கள் (Contact Us)</h2>
             <div class="contact-box">
@@ -90,27 +89,29 @@
             </div>
         </div>
 
+        <!-- நியாஸ் கன்ஸ்ட்ரக்ஷன்ஸ் கார்டு (போட்டோ இணைப்புடன்) -->
         <div class="card" style="border-left-color: #9b59b6;">
             <h2>🏗️ நியாஸ் கன்ஸ்ட்ரக்ஷன்ஸ் & டிஜிட்டல் சென்டர்</h2>
             <p><strong>Niyas Building Constructions:</strong> உங்கள் கனவு இல்லங்களை இன்ஜினியரிங் பிளான் படி, தரமான பொருட்களைக் கொண்டு கடையநல்லூரில் சிறந்த முறையில் கட்டித் தருகிறோம்!</p>
             
+            <!-- உங்கள் 12396.jpg போட்டோவை காட்டும் பகுதி -->
             <div class="image-box">
-                <p style="color: #00ffff; font-size: 14px; margin: 0 0 5px 0;">📸 எங்கள் நிறுவனத்தின் மாதிரி வடிவமைப்பு:</p>
-                <div style="background: #333; padding: 40px 10px; color: #ff9933; font-weight: bold; border: 2px dashed #ff9933; border-radius: 4px;">
-                    🏠 [நியாஸ் கன்ஸ்ட்ரக்ஷன் புகைப்பட போர்டு இடம்]
-                </div>
+                <p style="color: #00ffff; font-size: 14px; margin: 0 0 8px 0;">📸 எங்கள் நிறுவனத்தின் மாதிரி வடிவமைப்பு:</p>
+                <img src="12396.jpg" alt="Niyas Construction Board" class="construction-img">
             </div>
             
             <p style="font-size: 14px; color: #aaa;"><strong>Sana Digital Service:</strong> ஆன்லைன் சான்றிதழ்கள், ஆதார், ஸ்மார்ட் கார்டு வேலைகளும் உடனுக்குடன் செய்து தரப்படும்.</p>
         </div>
 
+        <!-- எங்களது ஆன்லைன் தளங்கள் (சரியான பிளாக்ஸ்பாட் லிங்க் உடன்) -->
         <div class="card" style="border-left-color: #dc3545;">
             <h2>🎥 எங்களது அதிகாரப்பூர்வ ஆன்லைன் தளங்கள்</h2>
             <p>எங்களது பயனுள்ள வீடியோக்கள் மற்றும் கம்ப்யூட்டர் தகவல்களைப் பெற கீழே உள்ள லிங்க்குகளைப் பயன்படுத்தவும்:</p>
             <a href="https://www.youtube.com/@lifemediatamil" target="_blank" class="action-btn" style="background:#dc3545; color:white;">➜ Life Media Tamil YouTube</a>
-            <a href="https://www.niyascomputers.blogspot.com" target="_blank" class="action-btn" style="background:#e67e22; color:white;">➜ Niyas Computers Blogspot</a>
+            <a href="https://niyascomputers.blogspot.com" target="_blank" class="action-btn" style="background:#e67e22; color:white;">➜ Niyas Computers Blogspot</a>
         </div>
 
+        <!-- கல்வி அறிவிப்புகள் -->
         <div class="card" style="border-left-color: #ff3333;">
             <h2>📢 உள்ளூர் கல்வி அறிவிப்புகள் (Live Info)</h2>
             <ul>
@@ -119,12 +120,14 @@
             <a href="https://dge.tn.gov.in/" target="_blank" class="action-btn" style="background-color: #dc3545; color: white;">NMMS ரிசல்ட் நேரடி பக்கம் ➜</a>
         </div>
 
+        <!-- அரசு ஆன்லைன் சேவைகள் -->
         <div class="card" style="border-left-color: #28a745;">
             <h2>🏛️ அரசு ஆன்லைன் சேவைகள் (CSC Digital Desk)</h2>
             <a href="https://www.tnesevai.tn.gov.in/Citizen/Registration.aspx" target="_blank" class="action-btn">வருமானம் / சாதி சான்றிதழ் ➜</a>
-            <a href="https://myaadhaar.uidai.gov.in/" target="_blank" class="action-btn">ஆதார் கார்டு டவுன்லோட் ➜</a>
+            <a href="https://myaadhaar.uidai.gov.in/" target="_blank" class="action-btn">ஆதார் கார்டு டவுன்লোட் ➜</a>
         </div>
 
+        <!-- உள்ளூர் பேருந்து நேரங்கள் -->
         <div class="card" style="border-left-color: #ff9933;">
             <h2>🚌 கடையநல்லூர் - தென்காசி பேருந்து நேரங்கள்</h2>
             <table>
@@ -134,13 +137,15 @@
             </table>
         </div>
 
+        <!-- விடுகதை பகுதி -->
         <div class="card" style="border-left-color: #ffcc00;">
             <h2>🎈 குழந்தைகள் பகுதி (Kids Corner)</h2>
             <p><strong>சிறுவர் விடுகதை:</strong> இரவில் வந்து பகலில் மறையும் வெள்ளிப் பூக்கள் எது?</p>
-            <button class="action-btn" style="padding: 4px 10px; font-size:12px;" onclick="toggleRiddle('ans1')">விடை காண்க</button>
-            <p id="ans1" class="riddle-ans">🎯 விடை: விண்மீன்கள் (நட்சத்திரங்கள்)</p>
+            <button class="action-btn" style="padding: 4px 10px; font-size:12px;" onclick="toggleRiddle('ans1')">विடை காண்க</button>
+            <p id="ans1" class="riddle-ans">🎯 விடை: விண்மீன்கள் (நвичайно நட்சத்திரங்கள்)</p>
         </div>
 
+        <!-- பொது அறிவு வினா-விடை -->
         <div class="card" style="border-left-color: #ff9933;">
             <h2>🎯 இன்றைய பொது அறிவு வினா</h2>
             <p><strong>கேள்வி:</strong> இந்தியாவின் மிக உயர்ந்த குடிமகன் விருது எது?</p>
@@ -169,3 +174,4 @@
     </script>
 </body>
 </html>
+
