@@ -5,306 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sana Digital & Multi Service Center</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-            margin: 0;
-            padding: 0;
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #121212; color: #e0e0e0; margin: 0; padding: 0; }
         
-        /* லோகோ மற்றும் ஹெட்டர் வடிவமைப்பு */
-        header {
-            background: linear-gradient(135deg, #1f1f1f, #2d2d2d);
-            padding: 30px 20px;
-            text-align: center;
-            border-bottom: 4px solid #00ffff;
-            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+        /* ஹெட்டர் & புதிய லோகோ ஸ்டைல் */
+        header { background: #1f1f1f; padding: 25px 20px; text-align: center; border-bottom: 4px solid #00ffff; }
+        .logo-container {
+            width: 80px; height: 80px; background: #000; border: 3px solid #00ffff;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 15px auto; box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
         }
-        .logo-box {
-            display: inline-block;
-            border: 3px solid #00ffff;
-            padding: 10px 20px;
-            border-radius: 12px;
-            background-color: #121212;
-            margin-bottom: 10px;
-            box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.3);
-        }
-        .logo-text {
-            color: #00ffff;
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 1.5px;
-            margin: 0;
-            text-transform: uppercase;
-        }
-        header p {
-            color: #ff9933;
-            margin: 10px 0 0 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
+        .logo-text { color: #00ffff; font-size: 32px; font-weight: bold; }
         
-        .container {
-            max-width: 850px;
-            margin: 20px auto;
-            padding: 15px;
-        }
-        .card {
-            background-color: #1e1e1e;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 25px;
-            border-left: 5px solid #00ffff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-        }
-        .card h2 {
-            color: #ff9933;
-            margin-top: 0;
-            font-size: 20px;
-        }
-        .card p {
-            line-height: 1.7;
-            color: #ccc;
-            font-size: 15px;
-        }
+        h1 { color: #00ffff; margin: 0; font-size: 24px; }
+        .tagline { color: #ff9933; margin-top: 5px; font-size: 14px; }
         
-        /* பட்டன்கள் */
-        .action-btn {
-            display: inline-block;
-            background-color: #ff9933;
-            color: #121212;
-            padding: 11px 18px;
-            margin: 8px 5px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: bold;
-            transition: 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-        .action-btn:hover {
-            background-color: #00ffff;
-            color: #121212;
-        }
-        .download-btn { background-color: #28a745; color: white; }
-        .download-btn:hover { background-color: #218838; color: white; }
+        .container { max-width: 850px; margin: 20px auto; padding: 15px; }
+        .card { background-color: #1e1e1e; border-radius: 8px; padding: 20px; margin-bottom: 25px; border-left: 5px solid #00ffff; box-shadow: 0 4px 10px rgba(0,0,0,0.4); }
+        .card h2 { color: #ff9933; margin-top: 0; }
         
-        .youtube-btn { background-color: #dc3545; color: white; }
-        .youtube-btn:hover { background-color: #b21f2d; color: white; }
-        
-        .blog-btn { background-color: #e67e22; color: white; }
-        .blog-btn:hover { background-color: #d35400; color: white; }
-        
-        .contact-btn { background-color: #3498db; color: white; }
-        .whatsapp-btn { background-color: #25d366; color: white; }
-        .whatsapp-btn:hover { background-color: #128c7e; color: white; }
-
-        /* டேப் சிஸ்டம் */
-        .tabs { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
-        .tab-btn {
-            background-color: #2a2a2a; color: #fff; border: 1px solid #444;
-            padding: 10px 18px; border-radius: 5px; cursor: pointer; font-weight: bold;
-        }
-        .tab-btn.active, .tab-btn:hover { background-color: #00ffff; color: #121212; border-color: #00ffff; }
-        .tab-content { display: none; background-color: #252525; padding: 15px; border-radius: 6px; border: 1px solid #333; }
-        .tab-content.active { display: block; }
-
-        /* அட்டவணை மற்றும் பிற கூறுகள் */
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; background-color: #252525; }
-        th, td { border: 1px solid #444; padding: 10px; text-align: left; font-size: 14px; }
-        th { background-color: #333; color: #00ffff; }
-        .badge { background-color: #dc3545; color: white; padding: 3px 8px; border-radius: 3px; font-size: 12px; font-weight: bold; }
-        .riddle-ans { color: #4dff4d; display: none; font-weight: bold; margin-top: 15px; }
-        .quiz-option { background-color: #2a2a2a; padding: 12px; margin: 8px 0; border-radius: 5px; cursor: pointer; border: 1px solid #3c3c3c; }
-        .quiz-option:hover { background-color: #383838; }
-        .quiz-result { margin-top: 15px; font-weight: bold; display: none; }
-
-        .address-text {
-            font-size: 15px;
-            line-height: 1.8;
-            color: #ddd;
-            background: #252525;
-            padding: 15px;
-            border-radius: 6px;
-            border: 1px solid #333;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: #777;
-            font-size: 13px;
-            margin-top: 50px;
-            border-top: 1px solid #222;
-            background-color: #1a1a1a;
-        }
+        .action-btn { display: inline-block; background-color: #ff9933; color: #121212; padding: 10px 15px; margin: 5px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 14px; }
+        .contact-box { background: #252525; padding: 15px; border-radius: 8px; border: 1px solid #333; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-box">
-            <div class="logo-text">SANA DIGITAL</div>
+        <!-- புதிய டிஜிட்டல் லோகோ -->
+        <div class="logo-container">
+            <span class="logo-text">SD</span>
         </div>
         <h1>Sana Digital & Multi Service Center</h1>
-        <p>பொதுமக்கள் மற்றும் மாணவர்களுக்கான ஆல்-இன்-ஒன் தமிழ் நல்வழிகாட்டி 🚀</p>
+        <p class="tagline">பொதுமக்கள் மற்றும் மாணவர்களுக்கான ஆல்-இன்-ஒன் தமிழ் நல்வழிகாட்டி 🚀</p>
     </header>
 
     <div class="container">
-
         <div class="card" style="border-left-color: #3498db;">
-            <h2>📞 தொடர்பு மற்றும் முகவரி விபரங்கள் (Contact Us)</h2>
-            <p>எங்களது டிஜிட்டல் மையம் மற்றும் கட்டுமான சேவைகளுக்குக் கீழே உள்ள முகவரியிலோ அல்லது மொபைல் எண்களிலோ தொடர்பு கொள்ளலாம்:</p>
-            <div class="address-text">
-                📍 <strong>முகவரி:</strong> தக்பாபள்ளி தெற்கு வடக்கு தெரு (Takwapalli South North street), ரஹ்மானியபுரம் மேற்கு, கடையநல்லூர்.<br>
-                📌 <strong>பின்கோடு:</strong> 627759 <br>
-                📱 <strong>அலைபேசி:</strong> 9489159454
-            </div>
-            <div style="margin-top: 15px;">
-                <a href="tel:9489159454" class="action-btn contact-btn">📞 நேரடியாக அழைக்க கிளிக் செய்க</a>
-                <a href="https://wa.me/9489159454" target="_blank" class="action-btn whatsapp-btn">💬 வாட்ஸ்அப்பில் பேச கிளிக் செய்க</a>
+            <h2>📞 தொடர்பு மற்றும் முகவரி</h2>
+            <div class="contact-box">
+                <p>📍 <strong>முகவரி:</strong> தக்பாபள்ளி தெற்கு வடக்கு தெரு, ரஹ்மானியபுரம் மேற்கு, கடையநல்லூர். (PIN: 627759)</p>
+                <p>📱 <strong>அலைபேசி:</strong> 9489159454</p>
+                <a href="tel:9489159454" class="action-btn" style="background:#3498db; color:white;">அழைக்க கிளிக் செய்யவும்</a>
+                <a href="https://wa.me/9489159454" target="_blank" class="action-btn" style="background:#25d366; color:white;">WhatsApp-ல் பேச</a>
             </div>
         </div>
 
         <div class="card" style="border-left-color: #dc3545;">
-            <h2>🎥 எங்களது அதிகாரப்பூர்வ தளங்கள் (Follow Us)</h2>
-            <p>தொழில்நுட்ப செய்திகள், பயனுள்ள வீடியோக்கள் மற்றும் கம்ப்யூட்டர் தகவல்களைப் பெற எங்களது தளங்களை பின்தொடரவும்:</p>
-            <a href="https://www.youtube.com/@lifemediatamil" target="_blank" class="action-btn youtube-btn">➜ Life Media Tamil YouTube</a>
-            <a href="https://www.niyascomputers.blogspot.com" target="_blank" class="action-btn blog-btn">➜ Niyas Computers Blogspot</a>
+            <h2>🎥 எங்களது தளங்கள்</h2>
+            <a href="https://www.youtube.com/@lifemediatamil" target="_blank" class="action-btn" style="background:#dc3545; color:white;">YouTube சேனல்</a>
+            <a href="https://www.niyascomputers.blogspot.com" target="_blank" class="action-btn" style="background:#e67e22; color:white;">பிளாக்ஸ்பாட்</a>
         </div>
-
-        <div class="card" style="border-left-color: #9b59b6;">
-            <h2>🏗️ நியாஸ் கன்ஸ்ட்ரக்ஷன்ஸ் & டிஜிட்டல் சென்டர்</h2>
-            <p><strong>Sana Digital & Multi Service Center:</strong> ஆன்லைன் சான்றிதழ் விண்ணப்பங்கள், ஆதார், ஸ்மார்ட் கார்டு வேலைகள் சிறந்த முறையில் செய்து தரப்படும்.</p>
-            <p><strong>Niyas Building Constructions:</strong> உங்கள் கனவு இல்லங்களை கடையநல்லூர் மற்றும் தென்காசி மாவட்ட சுற்றியுள்ள பகுதிகளில் தரமான முறையில், இன்ஜினியரிங் பிளான் படி கட்டித் தருகிறோம்.</p>
-        </div>
-
-        <div class="card" style="border-left-color: #dc3545;">
-            <h2>📢 உள்ளூர் கல்வி அறிவிப்புகள் (Live Info)</h2>
-            <ul>
-                <li><span class="badge">முக்கியம்</span> <strong>NMMS தேர்வு முடிவுகள்:</strong> தென்காசி மாவட்ட பள்ளி மாணவர்களுக்கான தேசிய திறனாய்வுத் தேர்வு முடிவுகள் மற்றும் விபரங்களை அறிய கீழே உள்ள லிங்க்கைப் பயன்படுத்தலாம்.</li>
-            </ul>
-            <a href="https://dge.tn.gov.in/" target="_blank" class="action-btn" style="background-color: #dc3545; color: white;">NMMS ரிசல்ட் நேரடி பக்கம் செல்ல ➜</a>
-        </div>
-
-        <div class="card" style="border-left-color: #28a745;">
-            <h2>🏛️ அரசு ஆன்லைன் சேவைகள் (CSC Digital Desk)</h2>
-            <p>அதிகாரப்பூர்வ அரசு இணையதளங்களின் நேரடி பக்கங்களுக்குச் செல்ல கீழே உள்ள பட்டன்களை அழுத்தவும்:</p>
-            <a href="https://www.tnesevai.tn.gov.in/Citizen/Registration.aspx" target="_blank" class="action-btn">வருமானம் / சாதி சான்றிதழ் விண்ணப்பிக்க ➜</a>
-            <a href="https://myaadhaar.uidai.gov.in/" target="_blank" class="action-btn">ஆதார் கார்டு டவுன்லோட் & அப்டேட் ➜</a>
-            <a href="https://www.tnpds.gov.in/pages/smartcard/smartcard-status.xhtml" target="_blank" class="action-btn">ஸ்மார்ட் ரேஷன் கார்டு நிலை அறிய ➜</a>
-        </div>
-
-        <div class="card" style="border-left-color: #ff9933;">
-            <h2>🚌 கடையநல்லூர் - தென்காசி பேருந்து வழித்தடங்கள் (Local Transport)</h2>
-            <table>
-                <tr>
-                    <th>புறப்படும் இடம்</th>
-                    <th>செல்லும் இடம்</th>
-                    <th>பேருந்து விவரம் / நேரம்</th>
-                </tr>
-                <tr>
-                    <td>கடையநல்லூர்</td>
-                    <td>தென்காசி</td>
-                    <td>காலை 06:00 மணி முதல் இரவு 10:30 மணி வரை (ஒவ்வொரு 10 நிமிடத்திற்கும் தொடர்ச்சியான பஸ் வசதி உள்ளது).</td>
-                </tr>
-                <tr>
-                    <td>தென்காசி</td>
-                    <td>கடையநல்லூர்</td>
-                    <td>காலை 05:30 மணி முதல் இரவு 11:00 மணி வரை பேருந்து வசதிகள் உள்ளன.</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="card" style="border-left-color: #00ffff;">
-            <h2>📚 போட்டித் தேர்வுகள் மற்றும் பாடப்புத்தகங்கள் (Exam Hub)</h2>
-            <div class="tabs">
-                <button class="tab-btn active" onclick="openTab(event, 'tnpsc')">TNPSC (தமிழக அரசு)</button>
-                <button class="tab-btn" onclick="openTab(event, 'upsc')">UPSC (IAS/IPS)</button>
-                <button class="tab-btn" onclick="openTab(event, 'ssc')">SSC (மத்திய அரசு)</button>
-            </div>
-
-            <div id="tnpsc" class="tab-content active">
-                <h3>📌 TNPSC & பள்ளிப் பாடப்புத்தகங்கள் நேரடி டவுன்லோட் பக்கம்:</h3>
-                <a href="https://www.textbooksonline.tn.nic.in/" target="_blank" class="action-btn download-btn" style="width: 90%; text-align: center;">➜ சமச்சீர் கல்விப் புத்தகங்கள் நேரடிப் பக்கம் செல்ல கிளிக் செய்யவும்</a>
-            </div>
-            <div id="upsc" class="tab-content">
-                <h3>📌 UPSC NCERT புத்தகங்கள்</h3>
-                <a href="https://ncert.nic.in/textbook.php" target="_blank" class="action-btn download-btn">NCERT ஒரிஜினல் புத்தகங்கள் பக்கம் செல்ல ➜</a>
-            </div>
-            <div id="ssc" class="tab-content">
-                <h3>📌 SSC அதிகாரப்பூர்வ போர்ட்டல்</h3>
-                <a href="https://ssc.gov.in/portal/apply" target="_blank" class="action-btn download-btn">SSC ஆன்லைன் விண்ணப்பப் பக்கம் ➜</a>
-            </div>
-        </div>
-
-        <div class="card" style="border-left-color: #ffcc00;">
-            <h2>🎈 குழந்தைகள் பகுதி (Kids Corner)</h2>
-            <p><strong>சிறுவர் விடுகதைகள்:</strong> விடையைக் கண்டுபிடிக்க பட்டனைக் கிளிக் செய்யவும்!</p>
-            <ul>
-                <li>
-                    <strong>விடுகதை:</strong> இரவில் வந்து பகலில் மறையும் வெள்ளிப் பூக்கள் எது? 
-                    <button class="action-btn" style="padding: 4px 10px; font-size:12px; margin:0 5px;" onclick="toggleRiddle('ans1')">விடை காண்க</button>
-                    <p id="ans1" class="riddle-ans">🎯 விடை: விண்மீன்கள் (நட்சத்திரங்கள்)</p>
-                </li>
-            </ul>
-        </div>
-
-        <div class="card" style="border-left-color: #e83e8c;">
-            <h2>💖 பொழுதுபோக்கு & நட்புக் கவிதைகள் (Entertainment)</h2>
-            <p style="font-style: italic; color: #ffb3d9; padding-left: 15px; border-left: 2px solid #e83e8c;">
-                "ஆயிரம் உறவுகள் வந்தாலும்தான் நம் நட்பு என்றும் மாறாது!" <br>
-                உண்மையான நட்பு காலங்களைக் கடந்தும் இதயத்தில் வாழும் ஒரு உன்னத காவியம்.
-            </p>
-        </div>
-
-        <div class="card" style="border-left-color: #ff9933;">
-            <h2>🎯 இன்றைய பொது அறிவு வினா (Interactive Quiz)</h2>
-            <p><strong>கேள்வி:</strong> இந்தியாவின் மிக உயர்ந்த குடிமகன் விருது எது?</p>
-            <div class="quiz-option" onclick="checkAnswer(false, 'பத்ம விபூஷண் இரண்டாவது மிக உயர்ந்த விருது.')">அ) பத்ம விபூஷண்</div>
-            <div class="quiz-option" onclick="checkAnswer(true, 'சரியான விடை! பாரத ரத்னா தான் மிக உயர்ந்த குடிமகன் விருது.')">ஆ) பாரத ரத்னா</div>
-            <div id="quiz-res" class="quiz-result"></div>
-        </div>
-
     </div>
-
-    <footer>
-        <p>© 2026 Sana Digital & Multi Service Center. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
-    </footer>
-
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-        function toggleRiddle(id) {
-            var el = document.getElementById(id);
-            el.style.display = (el.style.display === "block") ? "none" : "block";
-        }
-
-        function checkAnswer(isCorrect, message) {
-            var resDiv = document.getElementById("quiz-res");
-            resDiv.style.display = "block";
-            if(isCorrect) {
-                resDiv.style.color = "#4dff4d";
-                resDiv.innerHTML = "✅ " + message;
-            } else {
-                resDiv.style.color = "#ff4d4d";
-                resDiv.innerHTML = "❌ " + message;
-            }
-        }
-    </script>
 </body>
 </html>
